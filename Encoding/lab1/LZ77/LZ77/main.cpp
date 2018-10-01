@@ -83,7 +83,7 @@ string DecodeWordLZ77(list<Triplet> Triplets)
 
 	for (Triplet triplet : Triplets) {
 
-		for (int i = Word.length() - triplet.Npos; i < triplet.Len; i++)
+		for (int i = Word.length() - triplet.Npos, len = 0; len < triplet.Len; i++, len++)
 			Word += Word[i];
 
 		Word += triplet.Symbol;

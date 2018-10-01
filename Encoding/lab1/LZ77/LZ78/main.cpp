@@ -65,7 +65,10 @@ list<Doublet> EncodeWordLZ78(string Word) {
 		// Нашёл
 		else
 			buffer = temp;
+	}
 
+	if (buffer.length() != 0) {
+		Doublets.push_back(Doublet(Dictionary[buffer], 0));
 	}
 
 	cout << "Dictionary:" << endl;
