@@ -1,0 +1,98 @@
+from Dataset import *
+from MLP_NN import *
+import matplotlib.pyplot as plt
+from matplotlib.patches import Circle
+import mpl_toolkits.mplot3d.art3d as art3d
+
+
+trainData, trainLabel, testData, testLabel = GetDataForClassification(5000)
+
+brain = NeuralNetwork(
+    listNeurons=[3, 36, 3],
+    listFuncs=['relu'],
+    Task='Classification',
+    lr=0.025,
+    lamb=0.001,
+    iters=1101,
+    batch_size=128
+)
+
+Loss = brain.train(trainData, trainLabel)
+
+
+Accuracy = 0
+LossF = 0
+for input, label in zip(testData, testLabel):
+    predict, loss = brain.Forward(input, label)
+    predict = predict.argmax()
+    LossF += loss
+    if np.argmax(label) == predict:
+        Accuracy += 1
+
+plt.title("Batch loss on train Data\nAccuracy is " + str(Accuracy / len(testData)))
+print("Sum test loss in testData is " + str(np.round(LossF, 2)))
+plt.plot(np.arange(len(Loss)), Loss)
+plt.show()
+
+
+# SUPER-PUPER VISUALIZER OF LABLED DATA
+# Waste of time ? :C
+
+fig = plt.figure()
+plt.title('Visualise training data')
+ax1 = fig.add_subplot(131, projection='3d')
+ax2 = fig.add_subplot(132, projection='3d')
+ax3 = fig.add_subplot(133, projection='3d')
+
+circles = [Circle((0, 0), 0.5, color='r', fill=False) for i in range(3)]
+ax1.add_patch(circles[0])
+ax1.add_patch(circles[1])
+ax1.add_patch(circles[2])
+art3d.pathpatch_2d_to_3d(circles[0])
+art3d.pathpatch_2d_to_3d(circles[1], zdir='x', z=0)
+art3d.pathpatch_2d_to_3d(circles[2], zdir='y', z=0)
+
+circles1 = [Circle((0, 0), 0.5, color='r', fill=False) for i in range(3)]
+circles2 = [Circle((0, 0), 1.0, color='black', fill=False) for i in range(3)]
+ax2.add_patch(circles1[0])
+ax2.add_patch(circles1[1])
+ax2.add_patch(circles1[2])
+ax2.add_patch(circles2[0])
+ax2.add_patch(circles2[1])
+ax2.add_patch(circles2[2])
+art3d.pathpatch_2d_to_3d(circles1[0])
+art3d.pathpatch_2d_to_3d(circles1[1], zdir='x', z=0)
+art3d.pathpatch_2d_to_3d(circles1[2], zdir='y', z=0)
+art3d.pathpatch_2d_to_3d(circles2[0])
+art3d.pathpatch_2d_to_3d(circles2[1], zdir='x', z=0)
+art3d.pathpatch_2d_to_3d(circles2[2], zdir='y', z=0)
+
+circles = [Circle((0, 0), 1.0, color='black', fill=False) for i in range(3)]
+ax3.add_patch(circles[0])
+ax3.add_patch(circles[1])
+ax3.add_patch(circles[2])
+art3d.pathpatch_2d_to_3d(circles[0])
+art3d.pathpatch_2d_to_3d(circles[1], zdir='x', z=0)
+art3d.pathpatch_2d_to_3d(circles[2], zdir='y', z=0)
+
+ax1.set_title('1 class')
+ax1.scatter(trainData[:, 0][trainLabel[:, 0] == 1], trainData[:, 1][trainLabel[:, 0] == 1],
+           trainData[:, 2][trainLabel[:, 0] == 1], color='r')
+ax2.set_title('2 class')
+ax2.scatter(trainData[:, 0][trainLabel[:, 1] == 1], trainData[:, 1][trainLabel[:, 1] == 1],
+           trainData[:, 2][trainLabel[:, 1] == 1], color='g')
+ax3.set_title('3 class')
+ax3.scatter(trainData[:, 0][trainLabel[:, 2] == 1], trainData[:, 1][trainLabel[:, 2] == 1],
+           trainData[:, 2][trainLabel[:, 2] == 1], color='b')
+
+ax1.set_xlim(-1, 1)
+ax1.set_ylim(-1, 1)
+ax1.set_zlim(-1, 1)
+ax2.set_xlim(-1, 1)
+ax2.set_ylim(-1, 1)
+ax2.set_zlim(-1, 1)
+ax3.set_xlim(-1, 1)
+ax3.set_ylim(-1, 1)
+ax3.set_zlim(-1, 1)
+
+plt.show()
