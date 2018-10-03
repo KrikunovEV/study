@@ -1,6 +1,23 @@
 import numpy as np
 
 
+from sklearn.datasets import load_digits
+
+dig = load_digits()
+images = dig['images']
+data = dig['data']
+target = dig['target']
+
+# vi = (vi - 127.5) / 127.5
+# shuffle data
+# train(80), valid(10), test sets(10)
+
+#hyperparameters: iter, epoch
+
+#confusion matrix
+
+# ИСПРАВИТЬ градиент подсчёт grad в MLP!!!!!!
+
 def GetDataForClassification(DataLen):
 
     #spheres
