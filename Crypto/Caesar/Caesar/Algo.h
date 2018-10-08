@@ -3,5 +3,5 @@
 #include <string>
 using namespace std;
 
-void Encode(char* word, int step, HWND hwEdit);
-void Decode(char* word, int step, HWND hwEdit);
+void Encode(HWND hwEditWord, HWND hwEditStep, HWND hwEditOut);
+void Decode(HWND hwEditWord, HWND hwEditStep, HWND hwEditOut);

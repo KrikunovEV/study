@@ -1,6 +1,7 @@
 #include <Windows.h>
 #include <iostream>
 #include <string>
+#include "Algo.h"
 
 using namespace std;
 
@@ -8,9 +9,8 @@ HWND hwButton_encode, hwButton_decode;
 HWND hwEdit_word, hwEdit_step, hwEdit_encode, hwEdit_decode;
 HWND hwStatic_word, hwStatic_step, hwStatic_encode, hwStatic_decode;
 
-#define LabelWord (HMENU)0
-#define LabelWord (HMENU)1
-#define LabelWord (HMENU)2
+#define hmButtonEncode (HMENU)1
+#define hmButtonDecode (HMENU)2
 
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -22,18 +22,29 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		
 	case WM_CREATE:
 	{
-		hwStatic_word = CreateWindow("STATIC", "Введите слово:", WS_CHILD | WS_VISIBLE, 150, 15, 500, 32, hWnd, LabelWord, NULL, NULL);
-		hwStatic_word = CreateWindow("STATIC", "Введите step:", WS_CHILD | WS_VISIBLE, 15, 15, 100, 32, hWnd, LabelWord, NULL, NULL);
-		hwStatic_word = CreateWindow("STATIC", "Закодированное слово:", WS_CHILD | WS_VISIBLE, 15, 175, 200, 32, hWnd, LabelWord, NULL, NULL);
-		hwStatic_word = CreateWindow("STATIC", "Декодированное слово:", WS_CHILD | WS_VISIBLE, 15, 350, 200, 32, hWnd, LabelWord, NULL, NULL);
+		hwStatic_word = CreateWindow("STATIC", "Введите слово:", WS_CHILD | WS_VISIBLE, 150, 15, 500, 32, hWnd, NULL, NULL, NULL);
+		hwStatic_word = CreateWindow("STATIC", "Введите step:", WS_CHILD | WS_VISIBLE, 15, 15, 100, 32, hWnd, NULL, NULL, NULL);
+		hwStatic_word = CreateWindow("STATIC", "Закодированное слово:", WS_CHILD | WS_VISIBLE, 15, 175, 200, 32, hWnd, NULL, NULL, NULL);
+		hwStatic_word = CreateWindow("STATIC", "Декодированное слово:", WS_CHILD | WS_VISIBLE, 15, 350, 200, 32, hWnd, NULL, NULL, NULL);
 
-		hwButton_encode = CreateWindow("BUTTON", "Закодировать", BS_PUSHBUTTON | WS_VISIBLE | WS_CHILD, 15, 125, 200, 40, hWnd, LabelWord, NULL, NULL);
-		hwButton_decode = CreateWindow("BUTTON", "Декодировать", BS_PUSHBUTTON | WS_VISIBLE | WS_CHILD, 15, 300, 200, 40, hWnd, LabelWord, NULL, NULL);
+		hwButton_encode = CreateWindow("BUTTON", "Закодировать", BS_PUSHBUTTON | WS_VISIBLE | WS_CHILD, 15, 125, 200, 40, hWnd, hmButtonEncode, NULL, NULL);
+		hwButton_decode = CreateWindow("BUTTON", "Декодировать", BS_PUSHBUTTON | WS_VISIBLE | WS_CHILD, 15, 300, 200, 40, hWnd, hmButtonDecode, NULL, NULL);
 
-		hwEdit_step = CreateWindow("EDIT", "5", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 15, 40, 50, 20, hWnd, LabelWord, NULL, NULL);
-		hwEdit_word = CreateWindow("EDIT", "", WS_VISIBLE | WS_CHILD | WS_BORDER, 150, 40, 600, 20, hWnd, LabelWord, NULL, NULL);
-		hwEdit_encode = CreateWindow("EDIT", "", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 15, 200, 600, 20, hWnd, LabelWord, NULL, NULL);
-		hwEdit_decode = CreateWindow("EDIT", "", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 15, 375, 600, 20, hWnd, LabelWord, NULL, NULL);
+		hwEdit_step = CreateWindow("EDIT", "5", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 15, 40, 50, 20, hWnd, NULL, NULL, NULL);
+		hwEdit_word = CreateWindow("EDIT", "", WS_VISIBLE | WS_CHILD | WS_BORDER, 150, 40, 600, 20, hWnd, NULL, NULL, NULL);
+		hwEdit_encode = CreateWindow("EDIT", "", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 15, 200, 600, 20, hWnd, NULL, NULL, NULL);
+		hwEdit_decode = CreateWindow("EDIT", "", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 15, 375, 600, 20, hWnd, NULL, NULL, NULL);
+
+		break;
+	}
+
+	
+	case WM_COMMAND:
+	{
+		if (LOWORD(wParam) == (int)hmButtonEncode)
+			Encode(hwEdit_word, hwEdit_step, hwEdit_encode);
+		else if (LOWORD(wParam) == (int)hmButtonDecode)
+			Decode(hwEdit_word, hwEdit_step, hwEdit_decode);
 
 		break;
 	}

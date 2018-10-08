@@ -1,6 +1,2 @@
 ﻿  main.cpp
-c:\users\evgenii\desktop\study\study\crypto\caesar\caesar\main.cpp(12): warning C4005: LabelWord: изменение макроопределения
-  c:\users\evgenii\desktop\study\study\crypto\caesar\caesar\main.cpp(11): note: см. предыдущее определение "LabelWord"
-c:\users\evgenii\desktop\study\study\crypto\caesar\caesar\main.cpp(13): warning C4005: LabelWord: изменение макроопределения
-  c:\users\evgenii\desktop\study\study\crypto\caesar\caesar\main.cpp(12): note: см. предыдущее определение "LabelWord"
-  Caesar.vcxproj -> C:\Users\Evgenii\Desktop\study\study\Crypto\Caesar\Debug\Caesar.exe
+  Caesar.vcxproj -> C:\Users\Evgeniy\Desktop\study\study\Crypto\Caesar\Debug\Caesar.exe

@@ -1,8 +1,15 @@
 #include "Algo.h"
 
 
-void Encode(char* word, int step, HWND hwEdit)
+void Encode(HWND hwEditWord, HWND hwEditStep, HWND hwEditOut)
 {
+	char word[100] = { 0 };
+	GetWindowText(hwEditWord, word, 100);
+
+	char chStep[100] = { 0 };
+	GetWindowText(hwEditStep, chStep, 100);
+	int step = chStep[0] - '0';
+
 	for (int i = 0; i < strlen(word); i++) {
 
 		if (word[i] == ' ')
@@ -13,12 +20,19 @@ void Encode(char* word, int step, HWND hwEdit)
 			word[i] += step;
 	}
 
-	SetWindowText(hwEdit, word);
+	SetWindowText(hwEditOut, word);
 }
 
 
-void Decode(char* word, int step, HWND hwEdit)
+void Decode(HWND hwEditWord, HWND hwEditStep, HWND hwEditOut)
 {
+	char word[100] = { 0 };
+	GetWindowText(hwEditWord, word, 100);
+
+	char chStep[100] = { 0 };
+	GetWindowText(hwEditStep, chStep, 100);
+	int step = chStep[0] - '0';
+
 	for (int i = 0; i < strlen(word); i++) {
 
 		if (word[i] == ' ')
@@ -29,50 +43,5 @@ void Decode(char* word, int step, HWND hwEdit)
 			word[i] -= step;
 	}
 
-	SetWindowText(hwEdit, word);
+	SetWindowText(hwEditOut, word);
 }
-
-/*
-int main()
-{
-	for (int i = 0; i < ('z' + 1 - 'a'); cout << (char)('a' + i) << ' ', i++);
-	cout << endl;
-
-
-	int step;
-	cout << "step: ";
-	cin >> step;
-
-	char str[100];
-	cout << "word: ";
-	cin.ignore();
-	cin.getline(str, 100);
-
-	for (int i = 0; i < strlen(str); i++) {
-
-		if (str[i] == ' ')
-			continue;
-		if (str[i] + step > 'z')
-			str[i] = 'a' + step - ('z' - str[i]) - 1;
-		else
-			str[i] += step;
-	}
-
-	cout << "Encode: " << str << endl;
-
-	for (int i = 0; i < strlen(str); i++) {
-
-		if (str[i] == ' ')
-			continue;
-		if (str[i] - step < 'a')
-			str[i] = 'z' - (step - (str[i] - 'a') - 1);
-		else
-			str[i] -= step;
-	}
-
-	cout << "Decode: " << str << endl;
-
-	system("pause");
-	return 0;
-}
-*/

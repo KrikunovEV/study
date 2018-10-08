@@ -1,0 +1,4 @@
+﻿  Algo.cpp
+c:\users\evgeniy\desktop\study\study\crypto\caesar\vijener\algo.cpp(12): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\evgeniy\desktop\study\study\crypto\caesar\vijener\algo.cpp(40): warning C4018: <: несоответствие типов со знаком и без знака
+  Vijener.vcxproj -> C:\Users\Evgeniy\Desktop\study\study\Crypto\Caesar\Debug\Vijener.exe
