@@ -1,4 +1,6 @@
 ﻿  main.cpp
-c:\users\evgeniy\desktop\study\study\crypto\caesar\caesar\main.cpp(21): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\evgeniy\desktop\study\study\crypto\caesar\caesar\main.cpp(33): warning C4018: <: несоответствие типов со знаком и без знака
-  Caesar.vcxproj -> C:\Users\Evgeniy\Desktop\study\study\Crypto\Caesar\Debug\Caesar.exe
+c:\users\evgenii\desktop\study\study\crypto\caesar\caesar\main.cpp(12): warning C4005: LabelWord: изменение макроопределения
+  c:\users\evgenii\desktop\study\study\crypto\caesar\caesar\main.cpp(11): note: см. предыдущее определение "LabelWord"
+c:\users\evgenii\desktop\study\study\crypto\caesar\caesar\main.cpp(13): warning C4005: LabelWord: изменение макроопределения
+  c:\users\evgenii\desktop\study\study\crypto\caesar\caesar\main.cpp(12): note: см. предыдущее определение "LabelWord"
+  Caesar.vcxproj -> C:\Users\Evgenii\Desktop\study\study\Crypto\Caesar\Debug\Caesar.exe
