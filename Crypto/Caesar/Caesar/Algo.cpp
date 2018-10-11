@@ -14,6 +14,7 @@ void Encode(HWND hwEditWord, HWND hwEditStep, HWND hwEditOut)
 
 		if (word[i] == ' ')
 			continue;
+
 		if (word[i] + step > 'z')
 			word[i] = 'a' + step - ('z' - word[i]) - 1;
 		else

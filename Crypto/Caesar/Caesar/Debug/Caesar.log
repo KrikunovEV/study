@@ -1,2 +1,7 @@
-﻿  main.cpp
-  Caesar.vcxproj -> C:\Users\Evgeniy\Desktop\study\study\Crypto\Caesar\Debug\Caesar.exe
+﻿  Algo.cpp
+c:\users\evgenii\desktop\study\study\crypto\caesar\caesar\algo.cpp(13): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\evgenii\desktop\study\study\crypto\caesar\caesar\algo.cpp(36): warning C4018: <: несоответствие типов со знаком и без знака
+  main.cpp
+  Создание кода...
+  LINK : не найден или не выполнена сборка C:\Users\Evgenii\Desktop\study\study\Crypto\Caesar\Debug\Caesar.exe при последней инкрементной компоновке; выполняется полная компоновка
+  Caesar.vcxproj -> C:\Users\Evgenii\Desktop\study\study\Crypto\Caesar\Debug\Caesar.exe

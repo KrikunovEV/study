@@ -21,6 +21,7 @@ void Encode(HWND hwEditWord, HWND hwEditKey, HWND hwEditOut)
 			j = 0;
 
 		word[i] += key[j] - 'A' + 1;
+
 		if (word[i] > 'Z')
 			word[i] = 'A' + (word[i] - 'Z') - 1;
 	}
