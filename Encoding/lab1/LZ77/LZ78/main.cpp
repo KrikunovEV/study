@@ -3,6 +3,8 @@
 #include <list>
 #include <map>
 #include <vector>
+#include <fstream>
+#include <algorithm>
 using namespace std;
 
 
@@ -25,17 +27,28 @@ string DecodeWordLZ78(list<Doublet> Doublets);
 
 
 int main() {
-
+	setlocale(LC_ALL, "rus");
 	cout << "Write Word for encoding: ";
 
-	string Word;
-	getline(cin, Word);
+	//string Word;
+	//getline(cin, Word);
 
-	list<Doublet> Doublets = EncodeWordLZ78(Word);
 
-	cout << "Doublets: " << endl;
-	for (Doublet var : Doublets)
-		var.Print();
+	ifstream f("../we.txt");
+	f.seekg(0, ios::end);
+	size_t size = f.tellg();
+	string Words(size, ' ');
+	f.seekg(0);
+	f.read(&Words[0], size);
+	//Words.erase(remove(Words.begin(), Words.end(), ' '), Words.end());
+	//Words.erase(remove(Words.begin(), Words.end(), '\n'), Words.end());
+
+
+	list<Doublet> Doublets = EncodeWordLZ78(Words);
+
+	//cout << "Doublets: " << endl;
+	//for (Doublet var : Doublets)
+		//var.Print();
 
 	string DecodedWord = DecodeWordLZ78(Doublets);
 	cout << "Decoded word: " << DecodedWord << endl;
@@ -71,10 +84,21 @@ list<Doublet> EncodeWordLZ78(string Word) {
 		Doublets.push_back(Doublet(Dictionary[buffer], 0));
 	}
 
-	cout << "Dictionary:" << endl;
+	/*cout << "Dictionary:" << endl;
 	for (std::pair<string, int> p : Dictionary)
 		cout << "Key: " << p.first << ", Value: " << p.second << endl;
-	cout << endl;
+	cout << endl;*/
+
+	ofstream file("../encoded.txt", ios::binary | ios::out);
+	if (!file.is_open()) {
+		cout << "םו םאר¸כ פאיכ";
+		system("pause");
+	}
+	for (Doublet doublet : Doublets) {
+		file.write((char*)&doublet.Pos, sizeof(int));
+		file.write((char*)&doublet.Symbol, sizeof(char));
+	}
+	file.close();
 	
 	return Doublets;
 }
@@ -93,10 +117,18 @@ string DecodeWordLZ78(list<Doublet> Doublets) {
 		Dictionary.push_back(part);
 	}
 
-	cout << endl << "Dictionary: ";
+	/*cout << endl << "Dictionary: ";
 	for (string s : Dictionary)
 		cout << s << endl;
-	cout << endl;
+	cout << endl;*/
+
+	ofstream file("../decoded.txt");
+	if (!file.is_open()) {
+		cout << "םו םאר¸כ פאיכ";
+		system("pause");
+	}
+	file << Word;
+	file.close();
 
 	return Word;
 }
