@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <list>
 #include <string>
 using namespace std;
@@ -72,6 +73,15 @@ list<Triplet> EncodeWordLZ77(string Word, int DictionaryLen, int BufferLen)
 		Triplets.push_back(Triplet(Npos, Len, Word[index]));
 		index++;
 	}
+
+
+	ofstream file ("../text.txt");
+	if (file.is_open())
+		cout << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" << endl << endl;
+
+
+	file.close();
+
 
 	return Triplets;
 }
