@@ -1,98 +1,105 @@
 from Dataset import *
 from MLP_NN import *
 import matplotlib.pyplot as plt
-from matplotlib.patches import Circle
-import mpl_toolkits.mplot3d.art3d as art3d
 
 
-trainData, trainLabel, testData, testLabel = GetDataForClassification(5000)
-
-brain = NeuralNetwork(
-    listNeurons=[3, 36, 3],
-    listFuncs=['relu'],
-    Task='Classification',
-    lr=0.025,
-    lamb=0.001,
-    iters=1101,
-    batch_size=128
-)
-
-Loss = brain.train(trainData, trainLabel)
+trainData, trainLabel, validData, validLabel, testData, testLabel = GetDataForClassification()
 
 
-Accuracy = 0
-LossF = 0
+
+# TRAINING
+
+num_input = len(trainData[0])
+num_k = 10
+
+lr = [0.0001, 0.001]
+batch_size = [32, 64]
+iters = [251, 501]
+num_neurons = [32, 64, 128]
+num_layers = [1, 2]
+funcs = ['relu', 'tanh']
+lambs = [0.0, 0.001]
+
+for i in range(len(lr)):
+    for j in range(len(batch_size)):
+        for q in range(len(iters)):
+            for w in range(len(num_neurons)):
+                for e in range(len(num_layers)):
+                    for t in range(len(funcs)):
+                        for y in range(len(lambs)):
+
+                            listNeurons = [num_input]
+                            listFuncs = []
+                            for n in range(num_layers[e]):
+                                listNeurons.append(num_neurons[w])
+                                listFuncs.append(funcs[t])
+                            listNeurons.append(num_k)
+
+                            brain = NeuralNetwork(
+                                listNeurons=listNeurons,
+                                listFuncs=listFuncs,
+                                Task='Classification',
+                                lr=lr[i],
+                                lamb=lambs[y],
+                                iters=iters[q],
+                                batch_size=batch_size[j])
+
+                            Losses = brain.train(trainData, trainLabel)
+
+                            pickle_it(brain, "Models/%s_%s_%s_%s_%s_%s_%s.pickle" %
+                                      (lr[i], batch_size[j], iters[q], num_neurons[w], num_layers[e],funcs[t], lambs[y]))
+
+
+
+# VALIDATION
+
+Accuracy = []
+brain = []
+params = []
+
+for i in range(len(lr)):
+    for j in range(len(batch_size)):
+        for q in range(len(iters)):
+            for w in range(len(num_neurons)):
+                for e in range(len(num_layers)):
+                    for t in range(len(funcs)):
+                        for y in range(len(lambs)):
+
+                            params.append("lr: %s\nbatch_size: %s\niters: %s\nnum_neurons: %s\nnum_layers: %s\nfuncs: %s\nlamb: %s" %
+                                      (lr[i], batch_size[j], iters[q], num_neurons[w], num_layers[e],funcs[t], lambs[y]))
+                            brain.append(unpickle_it("Models/%s_%s_%s_%s_%s_%s_%s.pickle" %
+                                      (lr[i], batch_size[j], iters[q], num_neurons[w], num_layers[e],funcs[t], lambs[y])))
+
+                            matrix = np.zeros((num_k, num_k))
+
+                            for a in range(len(validData)):
+                                predict, _ = brain[-1].Forward(validData[a], validLabel[a])
+                                matrix[np.argmax(validLabel[a]), np.argmax(predict)] += 1
+
+                            diag = 0
+                            for k in range(num_k):
+                                diag += matrix[k, k]
+
+                            Accuracy.append(diag / np.sum(matrix))
+
+
+THE_BEST_BRAIN = np.argmax(Accuracy)
+THE_WORST_BRAIN = np.argmin(Accuracy)
+ConfusionMatrix = np.zeros((num_k, num_k))
+
 for input, label in zip(testData, testLabel):
-    predict, loss = brain.Forward(input, label)
-    predict = predict.argmax()
-    LossF += loss
-    if np.argmax(label) == predict:
-        Accuracy += 1
+    predict, _ = brain[THE_BEST_BRAIN].Forward(input, label)
+    ConfusionMatrix[np.argmax(label), np.argmax(predict)] += 1
 
-plt.title("Batch loss on train Data\nAccuracy is " + str(Accuracy / len(testData)))
-print("Sum test loss in testData is " + str(np.round(LossF, 2)))
-plt.plot(np.arange(len(Loss)), Loss)
-plt.show()
+diag = 0
+for k in range(num_k):
+    diag += ConfusionMatrix[k, k]
 
+Accuracy = diag / np.sum(ConfusionMatrix)
 
-# SUPER-PUPER VISUALIZER OF LABLED DATA
-# Waste of time ? :C
-
-fig = plt.figure()
-plt.title('Visualise training data')
-ax1 = fig.add_subplot(131, projection='3d')
-ax2 = fig.add_subplot(132, projection='3d')
-ax3 = fig.add_subplot(133, projection='3d')
-
-circles = [Circle((0, 0), 0.5, color='r', fill=False) for i in range(3)]
-ax1.add_patch(circles[0])
-ax1.add_patch(circles[1])
-ax1.add_patch(circles[2])
-art3d.pathpatch_2d_to_3d(circles[0])
-art3d.pathpatch_2d_to_3d(circles[1], zdir='x', z=0)
-art3d.pathpatch_2d_to_3d(circles[2], zdir='y', z=0)
-
-circles1 = [Circle((0, 0), 0.5, color='r', fill=False) for i in range(3)]
-circles2 = [Circle((0, 0), 1.0, color='black', fill=False) for i in range(3)]
-ax2.add_patch(circles1[0])
-ax2.add_patch(circles1[1])
-ax2.add_patch(circles1[2])
-ax2.add_patch(circles2[0])
-ax2.add_patch(circles2[1])
-ax2.add_patch(circles2[2])
-art3d.pathpatch_2d_to_3d(circles1[0])
-art3d.pathpatch_2d_to_3d(circles1[1], zdir='x', z=0)
-art3d.pathpatch_2d_to_3d(circles1[2], zdir='y', z=0)
-art3d.pathpatch_2d_to_3d(circles2[0])
-art3d.pathpatch_2d_to_3d(circles2[1], zdir='x', z=0)
-art3d.pathpatch_2d_to_3d(circles2[2], zdir='y', z=0)
-
-circles = [Circle((0, 0), 1.0, color='black', fill=False) for i in range(3)]
-ax3.add_patch(circles[0])
-ax3.add_patch(circles[1])
-ax3.add_patch(circles[2])
-art3d.pathpatch_2d_to_3d(circles[0])
-art3d.pathpatch_2d_to_3d(circles[1], zdir='x', z=0)
-art3d.pathpatch_2d_to_3d(circles[2], zdir='y', z=0)
-
-ax1.set_title('1 class')
-ax1.scatter(trainData[:, 0][trainLabel[:, 0] == 1], trainData[:, 1][trainLabel[:, 0] == 1],
-           trainData[:, 2][trainLabel[:, 0] == 1], color='r')
-ax2.set_title('2 class')
-ax2.scatter(trainData[:, 0][trainLabel[:, 1] == 1], trainData[:, 1][trainLabel[:, 1] == 1],
-           trainData[:, 2][trainLabel[:, 1] == 1], color='g')
-ax3.set_title('3 class')
-ax3.scatter(trainData[:, 0][trainLabel[:, 2] == 1], trainData[:, 1][trainLabel[:, 2] == 1],
-           trainData[:, 2][trainLabel[:, 2] == 1], color='b')
-
-ax1.set_xlim(-1, 1)
-ax1.set_ylim(-1, 1)
-ax1.set_zlim(-1, 1)
-ax2.set_xlim(-1, 1)
-ax2.set_ylim(-1, 1)
-ax2.set_zlim(-1, 1)
-ax3.set_xlim(-1, 1)
-ax3.set_ylim(-1, 1)
-ax3.set_zlim(-1, 1)
-
-plt.show()
+print('\nTHE BEST BRAIN:\nAccuracy is', Accuracy)
+print(params[THE_BEST_BRAIN])
+print('Confusion matrix:')
+print(ConfusionMatrix)
+print('\n\nParams of the worst brain: ')
+print(params[THE_WORST_BRAIN])

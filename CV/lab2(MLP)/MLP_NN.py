@@ -43,10 +43,10 @@ class NeuralNetwork():
         return x
 
     def softmax_grad(self, x, label):
-        return x - label  # de/dy * dy/dz
+        return x - label
 
     def regression_grad(self, x, label):
-        return x - label  # de/dy * dy/dz
+        return x - label
 
 
     def RegressionLoss(self, x, label):
@@ -73,6 +73,7 @@ class NeuralNetwork():
             batch = np.random.choice(len(inputs), self.batch_size)
             batch_inputs = inputs[batch]
             batch_labels = labels[batch]
+
 
             for input, label in zip(batch_inputs, batch_labels):
                 if type(input) != np.ndarray:
@@ -115,14 +116,13 @@ class NeuralNetwork():
                             grad.append(self.softmax_grad(layers_data[-1], label))
                         elif self.Task == 'Regression':
                             grad.append(self.regression_grad(layers_data[-1], label))
-                            #grad.append(np.ones(len(layers_data[-1])))
 
                         grad_w.append(grad[-1].reshape((len(grad[-1]), 1)).dot
                               (layers_data[-2].reshape((1, len(layers_data[-2])))) + self.lamb * self.W[-1])
                         grad_b.append(grad[-1])
 
                     else:
-                        grad.append(self.W[i + 1].T.dot(grad[-1]))
+                        grad.append(self.W[i + 1].T.dot(grad[-1])) # delta z
 
                         gradient = 0
                         if self.listFuncs[i] == 'tanh':

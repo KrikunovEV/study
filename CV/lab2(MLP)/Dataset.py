@@ -1,46 +1,60 @@
 import numpy as np
-
-
 from sklearn.datasets import load_digits
+import pickle
 
-dig = load_digits()
-images = dig['images']
-data = dig['data']
-target = dig['target']
 
-# vi = (vi - 127.5) / 127.5
-# shuffle data
-# train(80), valid(10), test sets(10)
+def pickle_it(data, path):
+    with open(path, 'wb') as f:
+        pickle.dump(data, f, protocol=pickle.HIGHEST_PROTOCOL)
 
-#hyperparameters: iter, epoch
+def unpickle_it(path):
+    with open(path, 'rb') as f:
+        return pickle.load(f)
 
-#confusion matrix
 
-# ИСПРАВИТЬ градиент подсчёт grad в MLP!!!!!!
 
-def GetDataForClassification(DataLen):
+def GetDataForClassification():
+    dig = load_digits()
+    images = dig['images']
+    target = dig['target']
 
-    #spheres
+    # DATA ALREADY SHUFFLED INTO DATASET
 
-    # 3 classes:
-    # the first - into sphere with radius 0.5
-    # the second - onto donut between 0.5 - 1.0 radiuses
-    # the third - out sphere with radius 1.0
+    # normalize
+    half = np.max(images) / 2
+    images = (images - half) / half
 
-    TrainDataLen = int(DataLen * 0.9)
+    trainData, trainLabel = [], []
+    validData, validLabel = [], []
+    testData, testLabel = [], []
 
-    Data = np.random.random_sample((DataLen, 3)) * 2 - 1 # NORMALIZE COORDINATE [-1; 1] + ZERO CENTERED
-    Label = np.empty(shape=(DataLen, 3))
-    for i in range(DataLen):
-        norm = np.sqrt(np.sum(np.square(Data[i])))
-        if norm < 0.5:
-            Label[i] = np.array([1, 0, 0])
-        elif norm < 1.0:
-            Label[i] = np.array([0, 1, 0])
-        else:
-            Label[i] = np.array([0, 0, 1])
+    one_hot_encoding = np.zeros(10)
 
-    return Data[:TrainDataLen], Label[:TrainDataLen], Data[TrainDataLen:], Label[TrainDataLen:]
+    for k in range(10):
+        mask = target == k
+        img_k = images[mask]
+        label_k = target[mask]
+
+        num_train = int(len(label_k) * 0.8)
+        num_valid = num_train + int(len(label_k) * 0.1)
+        num_test = int(len(label_k))
+
+        label = np.array(one_hot_encoding)
+        label[k] = 1.0
+
+        for i in range(num_train):
+            trainData.append(img_k[i].flatten())
+            trainLabel.append(label)
+
+        for i in range(num_train, num_valid):
+            validData.append(img_k[i].flatten())
+            validLabel.append(label)
+
+        for i in range(num_valid, num_test):
+            testData.append(img_k[i].flatten())
+            testLabel.append(label)
+
+    return np.array(trainData), np.array(trainLabel), np.array(validData), np.array(validLabel), np.array(testData), np.array(testLabel)
 
 
 def GetDataForRegression(DataLen):
