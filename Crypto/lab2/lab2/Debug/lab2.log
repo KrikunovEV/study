@@ -1,6 +1,1 @@
-﻿  Algo.cpp
-c:\users\evgeniy\desktop\study\study\crypto\lab2\lab2\algo.cpp(12): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\evgeniy\desktop\study\study\crypto\lab2\lab2\algo.cpp(26): warning C4244: =: преобразование "unsigned long" в "char", возможна потеря данных
-c:\users\evgeniy\desktop\study\study\crypto\lab2\lab2\algo.cpp(43): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\evgeniy\desktop\study\study\crypto\lab2\lab2\algo.cpp(57): warning C4244: =: преобразование "unsigned long" в "char", возможна потеря данных
-  lab2.vcxproj -> C:\Users\Evgeniy\Desktop\study\study\Crypto\lab2\Debug\Gammirovanie.exe
+﻿  lab2.vcxproj -> C:\Users\Evgenii\Desktop\study\study\Crypto\lab2\Debug\Gammirovanie.exe

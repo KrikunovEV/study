@@ -24,15 +24,15 @@ void Compute(HWND a_edit, HWND b_edit, HWND mod_edit, HWND out_edit)
 	for (len = len-1; len >= 0; len--) {
 		if (b_bin[len] == 0) {
 			result = (result*result) % mod;
-			char out[10] = { 0 };
-			sprintf_s(out, "%d", result);
-			MessageBox(0, out, "0", 0);
+			//char out[10] = { 0 };
+			//sprintf_s(out, "%d", result);
+			//MessageBox(0, out, "0", 0);
 		}
 		else {
 			result = (result*result*a) % mod;
-			char out[10] = { 0 };
-			sprintf_s(out, "%d", result);
-			MessageBox(0, out, "1", 0);
+			//char out[10] = { 0 };
+			//sprintf_s(out, "%d", result);
+			//MessageBox(0, out, "1", 0);
 		}
 	}
 

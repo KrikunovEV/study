@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Transpose", "Transpose\Tran
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pairwise", "Pairwise\Pairwise.vcxproj", "{44E5441C-2515-43EF-9058-70F0EE3CCB7B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "threads", "threads\threads.vcxproj", "{06D64B69-C132-4557-A5DD-BCC5E3DDA94F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{44E5441C-2515-43EF-9058-70F0EE3CCB7B}.Release|x64.Build.0 = Release|x64
 		{44E5441C-2515-43EF-9058-70F0EE3CCB7B}.Release|x86.ActiveCfg = Release|Win32
 		{44E5441C-2515-43EF-9058-70F0EE3CCB7B}.Release|x86.Build.0 = Release|Win32
+		{06D64B69-C132-4557-A5DD-BCC5E3DDA94F}.Debug|x64.ActiveCfg = Debug|x64
+		{06D64B69-C132-4557-A5DD-BCC5E3DDA94F}.Debug|x64.Build.0 = Debug|x64
+		{06D64B69-C132-4557-A5DD-BCC5E3DDA94F}.Debug|x86.ActiveCfg = Debug|Win32
+		{06D64B69-C132-4557-A5DD-BCC5E3DDA94F}.Debug|x86.Build.0 = Debug|Win32
+		{06D64B69-C132-4557-A5DD-BCC5E3DDA94F}.Release|x64.ActiveCfg = Release|x64
+		{06D64B69-C132-4557-A5DD-BCC5E3DDA94F}.Release|x64.Build.0 = Release|x64
+		{06D64B69-C132-4557-A5DD-BCC5E3DDA94F}.Release|x86.ActiveCfg = Release|Win32
+		{06D64B69-C132-4557-A5DD-BCC5E3DDA94F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
