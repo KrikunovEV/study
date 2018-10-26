@@ -5,19 +5,45 @@ using namespace std;
 
 int main()
 {
-	const int N = 9;
-	int A[N] = { 1, 2, 3, 4, 5, 6, 7, 8 , 9 };
+	const int N = 10;
+	const int T = 3;
+	int A[N];
 
-
-#pragma omp for schedule(dynamic, 3)
-	for (int j = 0; j < N; j += 3)
+	for (int i = 1; i <= N; i++)
+		A[i-1] = i;
+	
+	// 1 iter
+#pragma omp for schedule(dynamic, T)
+	for (int j = 0; j < N; j += T)
 	{
-		A[j + 1] += A[j];
-		A[j + 2] += A[j + 1];
+		for (int i = 0; i < T - 1; i++) {
+			if (j + i + 1 < N)
+				A[j + i + 1] += A[j + i];
+			else 
+				break;
+		}
 	}
 
-	for (int j = 2; j < N - 3; j += 3)
-		A[j + 3] += A[j];
+	// 2 iter
+	for (int j = T - 1; j < N - 1; j += T)
+	{
+		if (j + T < N)
+			A[j + T] += A[j];
+		else
+			A[N - 1] += A[j];
+	}
+
+	// 3 iter
+#pragma omp for schedule(dynamic, T)
+	for (int j = T - 1; j < N - 1; j += T)
+	{
+		for (int i = 0; i < T - 1; i++) {
+			if (j + i + 1 < N - 1)
+				A[j + i + 1] += A[j];
+			else
+				break;
+		}
+	}
 
 	for (int i = 0; i < N; i++)
 		cout << A[i] << ' ';
