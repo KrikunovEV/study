@@ -28,13 +28,13 @@ string DecodeWordLZ78(list<Doublet> Doublets);
 
 int main() {
 	setlocale(LC_ALL, "rus");
-	cout << "Write Word for encoding: ";
+	//cout << "Write Word for encoding: ";
 
 	//string Word;
 	//getline(cin, Word);
 
 
-	ifstream f("../we.txt");
+	ifstream f("../weq.txt");
 	f.seekg(0, ios::end);
 	size_t size = f.tellg();
 	string Words(size, ' ');
@@ -51,7 +51,7 @@ int main() {
 		//var.Print();
 
 	string DecodedWord = DecodeWordLZ78(Doublets);
-	cout << "Decoded word: " << DecodedWord << endl;
+	//cout << "Decoded word: " << DecodedWord << endl;
 
 	system("pause");
 	return 0;
@@ -89,7 +89,7 @@ list<Doublet> EncodeWordLZ78(string Word) {
 		cout << "Key: " << p.first << ", Value: " << p.second << endl;
 	cout << endl;*/
 
-	ofstream file("../encoded.txt", ios::binary | ios::out);
+	ofstream file("../encoded2.txt", ios::binary | ios::out);
 	if (!file.is_open()) {
 		cout << "םו םאר¸כ פאיכ";
 		system("pause");
@@ -122,7 +122,7 @@ string DecodeWordLZ78(list<Doublet> Doublets) {
 		cout << s << endl;
 	cout << endl;*/
 
-	ofstream file("../decoded.txt");
+	ofstream file("../decoded2.txt");
 	if (!file.is_open()) {
 		cout << "םו םאר¸כ פאיכ";
 		system("pause");
