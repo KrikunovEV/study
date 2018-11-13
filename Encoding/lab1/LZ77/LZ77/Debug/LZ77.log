@@ -1,5 +1,6 @@
 ﻿  main.cpp
-c:\users\evgeniy\desktop\study\study\encoding\lab1\lz77\lz77\main.cpp(41): warning C4244: инициализация: преобразование "std::streamoff" в "size_t", возможна потеря данных
-c:\users\evgeniy\desktop\study\study\encoding\lab1\lz77\lz77\main.cpp(91): warning C4018: >: несоответствие типов со знаком и без знака
+c:\users\evgenii\desktop\study\study\encoding\lab1\lz77\lz77\main.cpp(41): warning C4244: инициализация: преобразование "std::streamoff" в "size_t", возможна потеря данных
+c:\users\evgenii\desktop\study\study\encoding\lab1\lz77\lz77\main.cpp(91): warning C4018: >: несоответствие типов со знаком и без знака
 LINK : warning LNK4044: нераспознанный параметр "/w"; игнорируется
-  LZ77.vcxproj -> C:\Users\Evgeniy\Desktop\study\study\Encoding\lab1\LZ77\Debug\LZ77.exe
+  LINK : не найден или не выполнена сборка C:\Users\Evgenii\Desktop\study\study\Encoding\lab1\LZ77\Debug\LZ77.exe при последней инкрементной компоновке; выполняется полная компоновка
+  LZ77.vcxproj -> C:\Users\Evgenii\Desktop\study\study\Encoding\lab1\LZ77\Debug\LZ77.exe

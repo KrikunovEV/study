@@ -63,6 +63,12 @@ string FromBinaryToString(bitset<64> Text)
 }
 
 
+string FromBinaryToSring(bitset<64> Text)
+{
+	return string("12345678");
+}
+
+
 bitset<64> IPpermutation(bitset<64> input)
 {
 	int indices[64] =
@@ -160,15 +166,21 @@ bitset<32> DES(bitset<32> Text, bitset<48> RoundKey)
 }
 
 
-bitset<64> TripleDESAlgorithm(bitset<64> Text, bitset<56> Key)
+bitset<64> TripleDESAlgorithm(bitset<64> Text, bitset<56> Key1, bitset<56> Key2, bitset<56> Key3, bitset<28> C[3], bitset<28> D[3])
 {
 	// for Key
-	bitset<28> C, D;
+	bitset<28> C1, C2, C3, D1, D2, D3;
 	for (int i = 0; i < 56; i++)
-		if (i < 28)
-			C[i] = Key[i];
-		else
-			D[i - 28] = Key[i];
+		if (i < 28) {
+			C1[i] = Key1[i];
+			C2[i] = Key2[i];
+			C3[i] = Key3[i];
+		}
+		else {
+			D1[i - 28] = Key1[i];
+			D2[i - 28] = Key2[i];
+			D3[i - 28] = Key3[i];
+		}
 
 	// for DES
 	bitset<32> L, R;
@@ -182,32 +194,47 @@ bitset<64> TripleDESAlgorithm(bitset<64> Text, bitset<56> Key)
 	// 16 rounds
 	for (int i = 0; i < 16; i++)
 	{
-		C = KeyShift(C, i);
-		D = KeyShift(D, i);
-		cout << C.to_string() << endl;
-		cout << D.to_string() << endl;
-		cout << endl;
-		bitset<48> RoundKey = KeyCompress(C, D);
+		C1 = KeyShiftLeft(C1, i);
+		C2 = KeyShiftLeft(C2, i);
+		C3 = KeyShiftLeft(C3, i);
+		D1 = KeyShiftLeft(D1, i);
+		D2 = KeyShiftLeft(D2, i);
+		D3 = KeyShiftLeft(D3, i);
+		cout << "C: " << C1.to_string() << endl;
+		cout << "D: " << D1.to_string() << endl;
+		
+		bitset<48> RoundKey1 = KeyCompress(C1, D1);
+		bitset<48> RoundKey2 = KeyCompress(C2, D2);
+		bitset<48> RoundKey3 = KeyCompress(C3, D3);
+		cout << "Round Key: " << RoundKey1.to_string() << endl;
 
-		bitset<32> XOR = L ^ DES(R, RoundKey);
+		bitset<32> XOR = L ^ DES(DES(DES(R, RoundKey1), RoundKey2), RoundKey3);
+		cout << "XOR: " << XOR.to_string() << endl << endl;
 
 		L = R;
 		R = XOR;
 	}
 
+	C[0] = C1;
+	C[1] = C2;
+	C[2] = C3;
+
+	D[0] = D1;
+	D[1] = D2;
+	D[2] = D3;
 
 	bitset<64> output;
 	for (int i = 0; i < 64; i++)
 		if (i < 32)
-			Text[i] = L[i];
+			output[i] = L[i];
 		else
-			Text[i] = R[i - 32];
+			output[i] = R[i - 32];
 
 	return output;
 }
 
 
-bitset<28> KeyShift(bitset<28> KeyPart, int round)
+bitset<28> KeyShiftLeft(bitset<28> KeyPart, int round)
 {
 	bitset<28> output = KeyPart;
 
@@ -222,6 +249,27 @@ bitset<28> KeyShift(bitset<28> KeyPart, int round)
 		output <<= 2;
 		output[0] = shifted2;
 		output[1] = shifted1;
+	}
+
+	return output;
+}
+
+
+bitset<28> KeyShiftRight(bitset<28> KeyPart, int round)
+{
+	bitset<28> output = KeyPart;
+
+	if (round == 0 || round == 1 || round == 8 || round == 15) {
+		int shifted = output[0];
+		output >>= 1;
+		output[27] = shifted;
+	}
+	else {
+		int shifted1 = output[0];
+		int shifted2 = output[1];
+		output >>= 2;
+		output[27] = shifted2;
+		output[26] = shifted1;
 	}
 
 	return output;
@@ -345,6 +393,67 @@ bitset<32> Sboxes(bitset<48> input)
 		for (int j = 0; j < 4; j++)
 			output[i * 4 + j] = bits[j];
 	}
+
+	return output;
+}
+
+
+bitset<64> DecryptTripleDES(bitset<64> Text, bitset<28> C[3], bitset<28> D[3])
+{
+	// for Key
+	bitset<28> C1, C2, C3, D1, D2, D3;
+
+	C1 = C[0];
+	C2 = C[1];
+	C3 = C[2];
+
+	D1 = D[0];
+	D2 = D[1];
+	D3 = D[2];
+
+	// for DES
+	bitset<32> L, R;
+	for (int i = 0; i < 64; i++)
+		if (i < 32)
+			L[i] = Text[i];
+		else
+			R[i - 32] = Text[i];
+
+
+	// 16 rounds
+	for (int i = 0; i < 16; i++)
+	{
+		// Lnew = R
+		// Rnew = L ^ DES(R)
+
+		// R = Lnew
+		// L = Rnew ^ DES(Lnew)
+
+
+
+		bitset<48> RoundKey1 = KeyCompress(C1, D1);
+		bitset<48> RoundKey2 = KeyCompress(C2, D2);
+		bitset<48> RoundKey3 = KeyCompress(C3, D3);
+
+		bitset<32> XOR = R ^ DES(DES(DES(L, RoundKey3), RoundKey2), RoundKey1);
+
+		R = L;
+		L = XOR;
+
+		C1 = KeyShiftRight(C1, 15 - i);
+		C2 = KeyShiftRight(C2, 15 - i);
+		C3 = KeyShiftRight(C3, 15 - i);
+		D1 = KeyShiftRight(D1, 15 - i);
+		D2 = KeyShiftRight(D2, 15 - i);
+		D3 = KeyShiftRight(D3, 15 - i);
+	}
+
+	bitset<64> output;
+	for (int i = 0; i < 64; i++)
+		if (i < 32)
+			output[i] = L[i];
+		else
+			output[i] = R[i - 32];
 
 	return output;
 }
