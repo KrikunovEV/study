@@ -30,7 +30,7 @@ void PAE(HWND hwEdit_A, HWND hwEdit_B, HWND hwEdit_x, HWND hwEdit_y, HWND hwEdit
 		x = y;
 		y = x_old - y * div[i];
 		sprintf_s(str, "%d %d %d", x, y, div[i]);
-		MessageBox(0, str,0,0);
+		//MessageBox(0, str,0,0);
 	}
 
 	_itoa_s(B, str, 10);

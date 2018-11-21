@@ -34,8 +34,6 @@ labels = digits.target
 # PREPROCESS
 # size, num channels, width, height
 images = images[:, np.newaxis, :, :]
-#half = np.max(images) / 2
-#images = (images - half) / half
 
 
 # Divide dataset on train(85)/test(15)

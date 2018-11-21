@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c444ad6-3127-4afb-9188-d2cf4e0d26e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/Browse.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/Debug/lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/Debug/lab1.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/Debug/lab1.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/Debug/lab1.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/Debug/lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/Debug/lab1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/CL.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/lab1.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/lab1.lastbuildstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/vc141.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/vc141.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/vc141.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/vc141.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,9 +15,10 @@
     <session id="-1867786660">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.47" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -46,46 +33,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2040" />
+          <entry key="py" value="2073" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2040" />
+          <entry key="Python" value="2073" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../lab2(MLP)/mainClassification.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../lab2(MLP)/Dataset.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="24" selection-end-column="35" />
+            <state relative-caret-position="170">
+              <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -195,21 +159,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.44844517" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29459903" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -220,18 +185,12 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../lab3(Pytorch)/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../lab2(MLP)/Dataset.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="24" selection-end-column="35" />
+        <state relative-caret-position="170">
+          <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -247,10 +206,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/../lab2(MLP)/Dataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="357">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="24" selection-end-column="35" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

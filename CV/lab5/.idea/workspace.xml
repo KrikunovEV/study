@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="57f1e843-d633-478e-b1b3-abdaf16c653d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../lab4(miniVGG)/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4(miniVGG)/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4(miniVGG)/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4(miniVGG)/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/ipch/AutoPCH/22b9027a4545a939/ALGO.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/ipch/AutoPCH/22b9027a4545a939/ALGO.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/ipch/AutoPCH/a6e943ff55da6244/MAIN.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/ipch/AutoPCH/a6e943ff55da6244/MAIN.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Debug/PAE.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Debug/PAE.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Debug/PAE.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Debug/PAE.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Debug/PAE.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Debug/PAE.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/MR/MR.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/MR/MR.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/MR/MR.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/MR/MR.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/MR/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/MR/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Algo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Algo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/Algo.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/Algo.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/PAE.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/PAE.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/vc141.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/vc141.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/vc141.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/vc141.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/Solution.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/Solution.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/Debug/lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/Debug/lab1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/Debug/lab1.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/Debug/lab1.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/Debug/lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/Debug/lab1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/Parallel.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/Parallel.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/lab1.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/lab1.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/vc141.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/vc141.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/vc141.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/vc141.pdb" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1707377128">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="2175" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="2175" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="json" value="4" />
+          <entry key="py" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JSON" value="4" />
+          <entry key="Python" value="3" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="118" column="1" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/delete.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/delete.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="30" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="lab5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab5" type="462c0819:PsiDirectoryNode" />
+              <item name="10k" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="delete" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="lab5" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/delete.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="lab5" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.delete" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.delete" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57f1e843-d633-478e-b1b3-abdaf16c653d" name="Default Changelist" comment="" />
+      <created>1542175507594</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542175507594</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Examples/data/labels/5.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examples/data/labels/8.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examples/data/labels/3.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/100k/data/labels/labels.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../lab4(miniVGG)/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="40" lean-forward="true" selection-end-line="105" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../ReinforcementLearning/A3C/ActorCriticModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delete.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="118" column="1" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
