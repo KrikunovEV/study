@@ -49,11 +49,11 @@ LossClassification = torch.nn.CrossEntropyLoss()
 LossRegression = torch.nn.SmoothL1Loss()
 
 OptimizerCNN_Class = torch.optim.Adam(list(CNN.parameters()) + list(Classification.parameters()), lr=0.002)
-OptimizerRegr = torch.optim.Adam(Regression.parameters(), lr=0.001)
+OptimizerRegr = torch.optim.Adam(Regression.parameters(), lr=0.0005)
 
 
 # Download dataset
-path = "10k/"
+path = "C:/Users/Evgeniy/Desktop/study/10k/"
 f1 = open(path + "images.json", 'r')
 f2 = open(path + "labels.json", 'r')
 f3 = open(path + "coords.json", 'r')
@@ -85,7 +85,7 @@ testData, testLabel, testCoords = torch.Tensor(testData), torch.LongTensor(testL
 
 losses = []
 
-for iteration in range(2000):
+for iteration in range(1000):
 
     ind = np.random.choice(len(trainData), 32)
     input = trainData[ind]
@@ -110,15 +110,24 @@ plt.title("Batch losses on train dataset")
 plt.plot(np.arange(len(losses)), losses)
 plt.show()
 
+torch.save(CNN.state_dict(), 'CNN.pt')
+torch.save(Regression.state_dict(), 'Regr.pt')
+torch.save(Classification.state_dict(), 'Class.pt')
+
 iter = 1
 matrix = np.zeros((10, 10))
 for input, label, coord in zip(testData, testLabel, testCoords):
     output = CNN(input[np.newaxis, :, :, :])
     class_output = Classification(output)
-    regr_output = Regression(output)
- 
-    if iter % 200:
-        input = cv2.rectangle(input.detach().numpy()[0], coord[:2], coord[2:], color=(255, 0, 0), thickness=1)
+    regr_output = np.array(Regression(output).detach().numpy()[0] * 64, dtype=np.uint8)
+
+    input = input.detach().numpy()[0]
+
+    if iter % 100 == 0:
+        # input = cv2.rectangle(input, (coord[0] * 64, coord[1] * 64), (coord[2] * 64, coord[3] * 64),
+        # color=(255, 0, 0), thickness=1)
+        input = cv2.rectangle(input, (regr_output[0], regr_output[1]),
+                              (regr_output[2], regr_output[3]), color=(255, 0, 0), thickness=1)
         plt.imshow(input, cmap='gray')
         plt.show()
     iter += 1
