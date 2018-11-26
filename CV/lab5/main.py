@@ -116,7 +116,7 @@ for input, label, coord in zip(testData, testLabel, testCoords):
     output = CNN(input[np.newaxis, :, :, :])
     class_output = Classification(output)
     regr_output = Regression(output)
- 
+
     if iter % 200:
         input = cv2.rectangle(input.detach().numpy()[0], coord[:2], coord[2:], color=(255, 0, 0), thickness=1)
         plt.imshow(input, cmap='gray')

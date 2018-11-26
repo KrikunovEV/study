@@ -2,41 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57f1e843-d633-478e-b1b3-abdaf16c653d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../lab4(miniVGG)/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4(miniVGG)/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab4(miniVGG)/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4(miniVGG)/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/Browse.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/ipch/AutoPCH/22b9027a4545a939/ALGO.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/ipch/AutoPCH/22b9027a4545a939/ALGO.ipch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/ipch/AutoPCH/a6e943ff55da6244/MAIN.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/ipch/AutoPCH/a6e943ff55da6244/MAIN.ipch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Debug/PAE.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Debug/PAE.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Debug/PAE.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Debug/PAE.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Debug/PAE.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Debug/PAE.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/MR/MR.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/MR/MR.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/MR/MR.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/MR/MR.vcxproj.filters" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/MR/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/MR/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Algo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Algo.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/Algo.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/Algo.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/PAE.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/PAE.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/vc141.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/vc141.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/vc141.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/lab3/Debug/vc141.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/Browse.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/Solution.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/Solution.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/Debug/lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/Debug/lab1.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/Debug/lab1.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/Debug/lab1.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/Debug/lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/Debug/lab1.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Parallel/Parallel.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/Parallel.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/CL.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/lab1.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/lab1.lastbuildstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/lab1.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/vc141.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/vc141.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Parallel/lab1/Debug/vc141.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/lab1/Debug/vc141.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +16,7 @@
     <session id="-1707377128">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.opened" value="2" />
@@ -83,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="118" column="1" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
+            <state relative-caret-position="223">
+              <caret line="120" column="21" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -124,7 +92,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="30" />
     <option name="width" value="1346" />
     <option name="height" value="688" />
@@ -141,11 +109,6 @@
             <path>
               <item name="lab5" type="b2602c69:ProjectViewProjectNode" />
               <item name="lab5" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab5" type="462c0819:PsiDirectoryNode" />
-              <item name="10k" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -234,15 +197,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -301,8 +263,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="118" column="1" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
+        <state relative-caret-position="223">
+          <caret line="120" column="21" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lab1", "lab1\lab1.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lab2", "lab2\lab2.vcxproj", "{B1C9579D-4760-4621-95B8-FE430366A58A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InterruptionPoint", "InterruptionPoint\InterruptionPoint.vcxproj", "{3750253A-03B7-4715-8077-D7742991CF85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{B1C9579D-4760-4621-95B8-FE430366A58A}.Release|x64.Build.0 = Release|x64
 		{B1C9579D-4760-4621-95B8-FE430366A58A}.Release|x86.ActiveCfg = Release|Win32
 		{B1C9579D-4760-4621-95B8-FE430366A58A}.Release|x86.Build.0 = Release|Win32
+		{3750253A-03B7-4715-8077-D7742991CF85}.Debug|x64.ActiveCfg = Debug|x64
+		{3750253A-03B7-4715-8077-D7742991CF85}.Debug|x64.Build.0 = Debug|x64
+		{3750253A-03B7-4715-8077-D7742991CF85}.Debug|x86.ActiveCfg = Debug|Win32
+		{3750253A-03B7-4715-8077-D7742991CF85}.Debug|x86.Build.0 = Debug|Win32
+		{3750253A-03B7-4715-8077-D7742991CF85}.Release|x64.ActiveCfg = Release|x64
+		{3750253A-03B7-4715-8077-D7742991CF85}.Release|x64.Build.0 = Release|x64
+		{3750253A-03B7-4715-8077-D7742991CF85}.Release|x86.ActiveCfg = Release|Win32
+		{3750253A-03B7-4715-8077-D7742991CF85}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
