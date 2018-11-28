@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <random>
 #include <iostream>
-
+#include <bitset>
+// —Œ ŒÀŒ¬»◊ „Î‡‚‡ 6.4
 using namespace std;
 
 void Get_p(int* &p, int& m, int& n, int& nmax)
@@ -351,104 +352,126 @@ void decode_bch(int n, int t, int* alpha_to, int* index_of, int nmax, int* recd)
 
 
 
+//int main()
+//{
+//	int* p = 0;
+//	int m;
+//	int n;
+//	int nmax;
+//
+//	Get_p(p, m, n, nmax);
+//
+//	int alpha_to[1000];
+//	int index_of[1000];
+//
+//	GenerateGF(p, m, nmax, alpha_to, index_of);
+//
+//	int g[1000];
+//	int t, k, d;
+//
+//	gen_poly(n, m, nmax, t, k, d, g, alpha_to, index_of);             /* Compute the generator polynomial of BCH code */
+//
+//	int bb[1000];
+//	int data[1000];
+//	for (int i = 0; i < k; i++)
+//		data[i] = 1;
+//
+//	encode(n, k, g, data, bb);
+//
+//	// recd[] are the coefficients of c(x) = x**(length-k)*data(x) + b(x)
+//	int recd[1000];
+//
+//	for (int i = 0; i < n - k; i++)
+//		recd[i] = bb[i];
+//
+//	for (int i = 0; i < k; i++)
+//		recd[i + n - k] = data[i];
+//
+//	cout << "Code polynomial:\nc(x) = ";
+//	for (int i = 0; i < n; i++)
+//		cout << recd[i];
+//	cout << endl;
+//
+//
+//	int numerr, errpos[1024], decerror = 0;
+//
+//	cout << "Enter the number of errors:" << endl;
+//	cin >> numerr;
+//	cout << "Enter error indecies (from 0 to " << n - 1 << "): ";
+//	/*
+//	 * recd[] are the coefficients of r(x) = c(x) + e(x)
+//	 */
+//	for (int i = 0; i < numerr; i++)
+//		cin >> errpos[i];
+//	if (numerr)
+//		for (int i = 0; i < numerr; i++)
+//			recd[errpos[i]] ^= 1;
+//	cout << "r(x) = ";
+//	for (int i = 0; i < n; i++) {
+//		cout << recd[i];
+//		if (i && ((i % 50) == 0))
+//			cout << endl;
+//	}
+//	cout << endl;
+//
+//	decode_bch(n, t, alpha_to, index_of, nmax, recd);
+//
+//	/*
+//	 * print out original and decoded data
+//	 */
+//	cout << "original data  = ";
+//	for (int i = 0; i < k; i++) {
+//		cout << data[i];
+//		if (i && ((i % 50) == 0))
+//			cout << endl;
+//	}
+//	cout << endl;
+//
+//	cout << "decoded data = ";
+//	for (int i = n - k; i < n; i++) {
+//		cout << recd[i];
+//		if ((i - n + k) && (((i - n + k) % 50) == 0))
+//			cout << endl;
+//	}
+//	cout << endl;
+//
+//	/*
+//	 * DECODING ERRORS? we compare only the data portion
+//	 
+//	for (i = length - k; i < length; i++)
+//		if (data[i - length + k] != recd[i])
+//			decerror++;
+//	if (decerror)
+//		printf("There were %d decoding errors in message positions\n", decerror);
+//	else
+//		printf("Succesful decoding\n");
+//		*/
+//	system("pause");
+//	return 0;
+//}
+
+
 int main()
 {
-	int* p = 0;
-	int m;
-	int n;
-	int nmax;
+	int m = 4;
+	int n = 15; // 2**m - 1
+	int k = 7;
+	int d = 5;
 
-	Get_p(p, m, n, nmax);
+	cout << "Code is (" << n << "," << k << "," << d << ")" << endl;
 
-	int alpha_to[10000];
-	int index_of[10000];
+	int* g = new int[9];
+	for (int i = 8; i >= 0; i--)
+		g[i] = 0;
+	g[0] = g[4] = g[6] = g[7] = g[8] = 1;
 
-	GenerateGF(p, m, nmax, alpha_to, index_of);
-
-	int g[10000];
-	int t, k, d;
-
-	gen_poly(n, m, nmax, t, k, d, g, alpha_to, index_of);             /* Compute the generator polynomial of BCH code */
-
-
-	int bb[10000];
-	int data[10000];
-	for (int i = 0; i < k; i++)
-		data[i] = (rand() & 65536) >> 16;
-
-	encode(n, k, g, data, bb);
-
-	// recd[] are the coefficients of c(x) = x**(length-k)*data(x) + b(x)
-	int recd[10000];
-
-	for (int i = 0; i < n - k; i++)
-		recd[i] = bb[i];
-
-	for (int i = 0; i < k; i++)
-		recd[i + n - k] = data[i];
-
-	cout << "Code polynomial:\nc(x) = ";
-	for (int i = 0; i < n; i++) {
-		cout << recd[i];
-		if (i && ((i % 50) == 0))
-			cout << endl;
-	}
+	cout << "g(x) = ";
+	for (int i = 8; i >= 0; i--)
+		cout << g[i];
 	cout << endl;
 
 
-	int numerr, errpos[1024], decerror = 0;
 
-	cout << "Enter the number of errors:" << endl;
-	cin >> numerr;
-	cout << "Enter error indecies (from 0 to " << n - 1 << "): ";
-	/*
-	 * recd[] are the coefficients of r(x) = c(x) + e(x)
-	 */
-	for (int i = 0; i < numerr; i++)
-		cin >> errpos[i];
-	if (numerr)
-		for (int i = 0; i < numerr; i++)
-			recd[errpos[i]] ^= 1;
-	cout << "r(x) = ";
-	for (int i = 0; i < n; i++) {
-		cout << recd[i];
-		if (i && ((i % 50) == 0))
-			cout << endl;
-	}
-	cout << endl;
-
-	decode_bch(n, t, alpha_to, index_of, nmax, recd);
-
-	/*
-	 * print out original and decoded data
-	 */
-	cout << "original data  = ";
-	for (int i = 0; i < k; i++) {
-		cout << data[i];
-		if (i && ((i % 50) == 0))
-			cout << endl;
-	}
-	cout << endl;
-
-	cout << "decoded data = ";
-	for (int i = n - k; i < n; i++) {
-		cout << recd[i];
-		if ((i - n + k) && (((i - n + k) % 50) == 0))
-			cout << endl;
-	}
-	cout << endl;
-
-	/*
-	 * DECODING ERRORS? we compare only the data portion
-	 
-	for (i = length - k; i < length; i++)
-		if (data[i - length + k] != recd[i])
-			decerror++;
-	if (decerror)
-		printf("There were %d decoding errors in message positions\n", decerror);
-	else
-		printf("Succesful decoding\n");
-		*/
 	system("pause");
 	return 0;
 }
