@@ -124,8 +124,6 @@ for input, label, coord in zip(testData, testLabel, testCoords):
     input = input.detach().numpy()[0]
 
     if iter % 100 == 0:
-        # input = cv2.rectangle(input, (coord[0] * 64, coord[1] * 64), (coord[2] * 64, coord[3] * 64),
-        # color=(255, 0, 0), thickness=1)
         input = cv2.rectangle(input, (regr_output[0], regr_output[1]),
                               (regr_output[2], regr_output[3]), color=(255, 0, 0), thickness=1)
         plt.imshow(input, cmap='gray')
