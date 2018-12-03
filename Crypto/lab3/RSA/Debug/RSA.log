@@ -1,0 +1,6 @@
+﻿  Algo.cpp
+c:\users\evgeniy\desktop\study\study\crypto\lab3\rsa\algo.cpp(34): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\evgeniy\desktop\study\study\crypto\lab3\rsa\algo.cpp(38): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\evgeniy\desktop\study\study\crypto\lab3\rsa\algo.cpp(43): warning C4244: =: преобразование "__int64" в "char", возможна потеря данных
+c:\users\evgeniy\desktop\study\study\crypto\lab3\rsa\algo.cpp(84): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
+  RSA.vcxproj -> C:\Users\Evgeniy\Desktop\study\study\Crypto\lab3\Debug\RSA.exe
