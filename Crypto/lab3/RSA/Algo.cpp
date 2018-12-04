@@ -1,46 +1,73 @@
 #include "Algo.h"
 
-
 void RSA(HWND hwq, HWND hwp, HWND hwtext, HWND hwencoded, HWND hwdecoded)
 {
+	gmp_randstate_t rstate;
+	gmp_randinit_default(rstate);
+	
 	char text[300];
 	GetWindowText(hwtext, text, 300);
 
 	char f[100];
 	GetWindowText(hwp, f, 100);
-	long long p = atoi(f);
+	int pbit = atoi(f);
+	mpz_t p;
+	mpz_init(p);
+	mpz_urandomb(p, rstate, pbit);
+	mpz_nextprime(p, p);
 
 	GetWindowText(hwq, f, 100);
-	long long q = atoi(f);
+	int qbit = atoi(f);
+	mpz_t q;
+	mpz_init(q);
+	mpz_urandomb(q, rstate, qbit);
+	mpz_nextprime(q, q);
 
-	long long n = p * q;
-	long long phi = (p - 1) * (q - 1);
+	mpz_t n, phi;
+	mpz_init(n);
+	mpz_init(phi);
+	mpz_mul(n, p, q);
+	mpz_mul(phi, p - 1, q - 1);
 	
 	// NOD (n, e) = 1,  2 <= e < phi + is prime
-	long long e = 7;
-	//for (; e < phi; e += 2)
-		//if (IsPrime(e) && NOD(e, n) == 1)
-			//break;
+	mpz_t e;
+	mpz_init(e);
+	mpz_set_ui(e, 7);
+	for (; e < phi; mpz_nextprime(e, e)) {
+		mpz_t NOD;
+		mpz_gcd(NOD, e, n);
+		if (mpz_cmp_si(NOD, 1) == 0)
+			break;
+	}
 
-	// e * d + phi * y = 1î
-	long long d = PAE(e, phi);
+	// e * d + phi * y = 1
+	mpz_t x, y, d;
+	mpz_gcdext(d, x, y, e, phi);
 	if (d < 0)
-		d = phi + d;
+		mpz_add(d, d, phi);
 
+	mpz_t encrypted[300];
 	long long encrypted_text[300];
 	for (int i = 0; i < 300; i++)
 		encrypted_text[i] = 0;
 
-	for (int i = 0; i < strlen(text); i++)
-		encrypted_text[i] = PowMod(text[i], e, n);
+	for (int i = 0; i < strlen(text); i++) {
+		mpz_t value;
+		mpz_set_ui(value, (int)text[i]);
+		mpz_powm(encrypted[i], value, e, n);
+		encrypted_text[i] = mpz_get_si(encrypted[i]);
+	}
 	
 	strcpy_s(f, "");
 	for (int i = 0; i < strlen(text); i++)
 		sprintf_s(f, "%s%c", f, (char)encrypted_text[i]);
 	SetWindowText(hwencoded, f);
 
-	for (int i = 0; i < 14; i++)
-		text[i] = PowMod(encrypted_text[i], d, n);
+	for (int i = 0; i < strlen(text); i++) {
+		mpz_t value;
+		mpz_powm(value, encrypted[i], d, n);
+		text[i] = mpz_get_si(value);
+	}
 
 	SetWindowText(hwdecoded, text);
 }
@@ -98,24 +125,4 @@ long long PAE(long long A, long long B)
 	}
 
 	return x;
-}
-
-
-long long PowMod(long long a, long long pow, long long mod)
-{
-	bitset<64> b_bin = pow; // up to 2**64
-	int len = 63;
-	for (; len >= 0; len--)
-		if (b_bin[len] == 1)
-			break;
-
-	long long result = a;
-	for (len = len - 1; len >= 0; len--) {
-		if (b_bin[len] == 0)
-			result = (result*result) % mod;
-		else
-			result = (result*result*a) % mod;
-	}
-
-	return result;
 }

@@ -4,6 +4,8 @@
 #include <Windows.h>
 #include <string>
 #include <iostream>
+#include <gmp.h>
+#pragma comment(lib, "gmp.lib")
 
 using namespace std;
 
@@ -14,5 +16,3 @@ bool IsPrime(long long n);
 long long NOD(long long A, long long B);
 
 long long PAE(long long e, long long phi);
-
-long long PowMod(long long a, long long pow, long long mod);
