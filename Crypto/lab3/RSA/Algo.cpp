@@ -2,6 +2,10 @@
 
 void RSA(HWND hwq, HWND hwp, HWND hwtext, HWND hwencoded, HWND hwdecoded)
 {
+	char debug[100000];
+	for (int i = 0; i < 100000; i++)
+		debug[i] = 0;
+
 	gmp_randstate_t rstate;
 	gmp_randinit_default(rstate);
 	
@@ -15,6 +19,7 @@ void RSA(HWND hwq, HWND hwp, HWND hwtext, HWND hwencoded, HWND hwdecoded)
 	mpz_init(p);
 	mpz_urandomb(p, rstate, pbit);
 	mpz_nextprime(p, p);
+	sprintf_s(debug, "%s%ld\n", debug, mpz_get_si(p));
 
 	GetWindowText(hwq, f, 100);
 	int qbit = atoi(f);
@@ -22,40 +27,61 @@ void RSA(HWND hwq, HWND hwp, HWND hwtext, HWND hwencoded, HWND hwdecoded)
 	mpz_init(q);
 	mpz_urandomb(q, rstate, qbit);
 	mpz_nextprime(q, q);
+	sprintf_s(debug, "%s%ld\n", debug, mpz_get_si(q));
 
 	mpz_t n, phi;
 	mpz_init(n);
 	mpz_init(phi);
 	mpz_mul(n, p, q);
-	mpz_mul(phi, p - 1, q - 1);
+	sprintf_s(debug, "%s%ld\n", debug, mpz_get_si(n));
+
+	mpz_sub_ui(p, p, 1);
+	mpz_sub_ui(q, q, 1);
+	mpz_mul(phi, p, q);
+	sprintf_s(debug, "%s%ld\n", debug, mpz_get_si(phi));
 	
 	// NOD (n, e) = 1,  2 <= e < phi + is prime
 	mpz_t e;
 	mpz_init(e);
 	mpz_set_ui(e, 7);
-	for (; e < phi; mpz_nextprime(e, e)) {
+	for (; mpz_cmp(e, phi) < 0; mpz_nextprime(e, e)) {
 		mpz_t NOD;
+		mpz_init(NOD);
 		mpz_gcd(NOD, e, n);
 		if (mpz_cmp_si(NOD, 1) == 0)
 			break;
 	}
+	sprintf_s(debug, "%s%ld\n", debug, mpz_get_si(e));
 
 	// e * d + phi * y = 1
 	mpz_t x, y, d;
-	mpz_gcdext(d, x, y, e, phi);
-	if (d < 0)
-		mpz_add(d, d, phi);
+	mpz_init(x);
+	mpz_init(y);
+	mpz_init(d);
+	mpz_gcdext(x, d, y, e, phi);
 
-	mpz_t encrypted[300];
-	long long encrypted_text[300];
-	for (int i = 0; i < 300; i++)
+	if (mpz_cmp_si(d, 0) < 0)
+		mpz_add(d, d, phi);
+	sprintf_s(debug, "%sd = %ld\n", debug, mpz_get_si(d));
+	sprintf_s(debug, "%sx = %ld\n", debug, mpz_get_si(x));
+	sprintf_s(debug, "%sy = %ld\n", debug, mpz_get_si(y));
+
+	MessageBox(0, debug, 0, 0);
+
+	mpz_t* encrypted = new mpz_t[strlen(text)];
+	char* encrypted_text = new char[strlen(text)];
+	for (int i = 0; i < strlen(text); i++) {
 		encrypted_text[i] = 0;
+		mpz_init(encrypted[i]);
+	}
 
 	for (int i = 0; i < strlen(text); i++) {
 		mpz_t value;
+		mpz_init(value);
 		mpz_set_ui(value, (int)text[i]);
 		mpz_powm(encrypted[i], value, e, n);
 		encrypted_text[i] = mpz_get_si(encrypted[i]);
+		
 	}
 	
 	strcpy_s(f, "");
@@ -65,11 +91,17 @@ void RSA(HWND hwq, HWND hwp, HWND hwtext, HWND hwencoded, HWND hwdecoded)
 
 	for (int i = 0; i < strlen(text); i++) {
 		mpz_t value;
+		mpz_init(value);
 		mpz_powm(value, encrypted[i], d, n);
 		text[i] = mpz_get_si(value);
+		if(!text[i])
+			MessageBox(0, text, 0, 0);
 	}
 
 	SetWindowText(hwdecoded, text);
+
+	delete[] encrypted;
+	delete[] encrypted_text;
 }
 
 
