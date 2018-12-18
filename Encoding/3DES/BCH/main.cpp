@@ -17,15 +17,42 @@ void encode(int* g, int gk, int* data, int k, int* encoded_data)
 }
 
 
-void decode(int* g, int gk, int* encoded_data, int datak, int k, int* data)
+void decode(int* g, int gk, int* encoded_data, int datak, int* data)
 {
-	for (int i = datak - 1; i >= gk - 1; i--)
-		for (int j = gk - 1; j >= 0; j--)
-			if (g[j] != 0)
-					data[i - j] += 1;
+	while (true)
+	{
+		int maxdeg = -1;
 
-	for (int i = 0; i < k; i++)
-		data[i] %= 2;
+		for (int i = datak - 1; i >= 0; i--)
+		{
+			if (encoded_data[i] != 0)
+			{
+				maxdeg = i;
+				break;
+			}
+		}
+
+
+		if (maxdeg == -1)
+		{
+			cout << "No errors" << endl;
+			return;
+		}
+		else if (maxdeg < gk - 1)
+		{
+			cout << "There is errors" << endl;
+			return;
+		}
+
+		int deg = maxdeg - (gk - 1);
+		data[deg] = 1;
+		for (int i = gk - 1; i >= 0; i--)
+		{
+			encoded_data[i + deg] -= g[i];
+			if (encoded_data[i + deg] < 0)
+				encoded_data[i + deg] = -encoded_data[i + deg];
+		}
+	}
 }
 
 
@@ -58,9 +85,9 @@ int main()
 
 
 	int len = 9 + k - 1;
-	int* encoded_data = new int[k];
-	for (int i = 0; i < k; i++)
-		data[i] = 0;
+	int* encoded_data = new int[len];
+	for (int i = 0; i < len; i++)
+		encoded_data[i] = 0;
 	encode(g, 9, data, k, encoded_data);
 	for (int i = len - 1; i >= 0; i--)
 		cout << encoded_data[i];
@@ -69,14 +96,15 @@ int main()
 
 	for (int i = 0; i < k; i++)
 		data[i] = 0;
-	decode(g, 9, encoded_data, len, k, data);
+	encoded_data[2] = encoded_data[4] = 1;
+	decode(g, 9, encoded_data, len, data);
 	for (int i = k - 1; i >= 0; i--)
-		//cout << data[i];
+		cout << data[i];
 	cout << endl;
 
 
-	//delete[] data;
-	//delete[] g;
+	delete[] data;
+	delete[] g;
 
 	system("pause");
 	return 0;

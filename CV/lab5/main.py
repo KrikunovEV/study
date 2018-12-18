@@ -48,8 +48,8 @@ Regression = torch.nn.Sequential(
 LossClassification = torch.nn.CrossEntropyLoss()
 LossRegression = torch.nn.SmoothL1Loss()
 
-OptimizerCNN_Class = torch.optim.Adam(list(CNN.parameters()) + list(Classification.parameters()), lr=0.002)
-OptimizerRegr = torch.optim.Adam(Regression.parameters(), lr=0.0005)
+OptimizerCNN_Class = torch.optim.Adam(list(CNN.parameters()) + list(Classification.parameters()), lr=0.00025)
+OptimizerRegr = torch.optim.Adam(Regression.parameters(), lr=0.00025)
 
 
 # Download dataset
@@ -85,7 +85,7 @@ testData, testLabel, testCoords = torch.Tensor(testData), torch.LongTensor(testL
 
 losses = []
 
-for iteration in range(1000):
+for iteration in range(4000):
 
     ind = np.random.choice(len(trainData), 32)
     input = trainData[ind]
@@ -96,13 +96,16 @@ for iteration in range(1000):
     class_output = Classification(output)
     regr_output = Regression(output)
 
-    loss = LossClassification(class_output, label) + 0.5 * LossRegression(regr_output, coord)
-    losses.append(loss.item())
+    loss1 = LossClassification(class_output, label)
+    loss2 = 0.5 * LossRegression(regr_output, coord)
+    losses.append(loss1.item() + loss2.item())
     print("Episode: " + str(iteration) + "; Loss: " + str(losses[-1]))
 
     OptimizerCNN_Class.zero_grad()
     OptimizerRegr.zero_grad()
-    loss.backward()
+
+    (loss1 + loss2).backward()
+
     OptimizerCNN_Class.step()
     OptimizerRegr.step()
 
