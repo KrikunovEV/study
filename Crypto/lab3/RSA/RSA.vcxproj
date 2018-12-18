@@ -70,8 +70,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Evgeniy\Desktop\study\study\gmp-static;C:\Users\Evgenii\Desktop\gmp-static;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Evgeniy\Desktop\study\study\gmp-static;C:\Users\Evgenii\Desktop\gmp-static;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Evgenii\Desktop\study\study\gmp-static;C:\Users\Evgeniy\Desktop\study\study\gmp-static;C:\Users\Evgenii\Desktop\gmp-static;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Evgenii\Desktop\study\study\gmp-static;C:\Users\Evgeniy\Desktop\study\study\gmp-static;C:\Users\Evgenii\Desktop\gmp-static;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

@@ -4,6 +4,7 @@
 #include <Windows.h>
 #include <string>
 #include <iostream>
+#include <fstream>
 #include <gmp.h>
 #pragma comment(lib, "gmp.lib")
 

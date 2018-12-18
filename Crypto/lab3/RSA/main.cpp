@@ -29,8 +29,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		hwButton_PAE = CreateWindow("BUTTON", "Âïåð¸ä !", BS_PUSHBUTTON | WS_VISIBLE | WS_CHILD, 15, 130, 200, 40, hWnd, hmButtonEncode, NULL, NULL);
 
 		hwEdit_text = CreateWindow("EDIT", "Hello, my friend !", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 50, 15, 300, 20, hWnd, NULL, NULL, NULL);
-		hwEdit_q = CreateWindow("EDIT", "31", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 30, 45, 50, 20, hWnd, NULL, NULL, NULL);
-		hwEdit_p = CreateWindow("EDIT", "17", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 30, 75, 40, 20, hWnd, NULL, NULL, NULL);
+		hwEdit_q = CreateWindow("EDIT", "512", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 30, 45, 50, 20, hWnd, NULL, NULL, NULL);
+		hwEdit_p = CreateWindow("EDIT", "256", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 30, 75, 50, 20, hWnd, NULL, NULL, NULL);
 		hwEdit_encoded = CreateWindow("EDIT", "", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 15, 210, 300, 20, hWnd, NULL, NULL, NULL);
 		hwEdit_decoded = CreateWindow("EDIT", "", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 15, 270, 300, 20, hWnd, NULL, NULL, NULL);
 

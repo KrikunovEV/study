@@ -35,7 +35,7 @@ void MillerRabin(HWND n, HWND r, HWND out)
 			s += 1;
 		}
 
-		int b = pow(a[i], int(t), N);
+		int b = pow(a[i], (int)t, N);
 
 		if (b == 1)
 			continue;
