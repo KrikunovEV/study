@@ -21,7 +21,7 @@ int main(int argc, char* argv[])
 	MPI_Status st;
 	double a = rank + 1;
 
-	int next_rank = rank + 1;
+	/*int next_rank = rank + 1;
 	if (next_rank == size)
 		next_rank = 0;
 
@@ -36,29 +36,34 @@ int main(int argc, char* argv[])
 		a += b;
 	}
 
-	cout << rank << ':' << a << endl;
+	cout << rank << ':' << a << endl;*/
 
-	/*if (rank == 0)
+	if (rank == 0)
 	{
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i < size-1; i++)
 		{
 			double b = 0.0;
-			MPI_Recv(&b, 1, MPI_DOUBLE, i+1, 0, MPI_COMM_WORLD, &st);
+			MPI_Recv(&b, 1, MPI_DOUBLE, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, &st);
+			cout << "Got from " << st.MPI_SOURCE << endl;
 			a += b;
 		}
-		cout << rank << ':' << a << endl;
+		//cout << rank << ':' << a << endl;
 
-		for (int i = 0; i < 3; i++)
+		/*for (int i = 0; i < size - 1; i++)
 		{
 			MPI_Send(&a, 1, MPI_DOUBLE, i + 1, 0, MPI_COMM_WORLD);
-		}
+		}*/
 	}
 	else
 	{
 		MPI_Send(&a, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD);
-		MPI_Recv(&a, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, &st);
+		//MPI_Recv(&a, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, &st);
 		cout << rank << ':' << a << endl;
-	}*/
+	}
+
+	MPI_Bcast(&a, 1, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+
+	cout << rank << ':' << a << endl;
 
 	MPI_Finalize();
 	return 0;

@@ -1,46 +1,8 @@
-'''
-
-Sobel's filters:
--1 0 1     1  2  1
--2 0 2     0  0  0
--1 0 1    -1 -2 -1
-
-
-      ->  dImg / dx (1st filter)         sqrt(x**2 + y**2) (карта модулей)
-Img(gray)                                ->
-      -> dImg / dy (2nd filter)          arctg (y / x) (карта модулей направлений)
-
-
-->    с порогом Т = 200 Edge binary. (Посмотреть процедуру cv2.Canny(img, 100, 200))
-
-
-->  Hough Transform
-В полярных координатах r = x Cos(phi) + y Sin (phi)
-x/y берём с Edge binary, phi дискретизируем (phi_min(-P/2), phi_max(P)) и находим r
-                           r дискретизируем от 0 до sqrt(w**2 + h**2)
-
-Аккулятируем в массив +1 в r и phi
-
-
-После делаем non-maximum suppression с каким-то офсетом.
-
-Переводим обратно в y = kx + b и рисуем линию cv2.line()
-
-
-
-Оптимизация:
-1) Сэмплим берём 70% точек.
-2) Берём две точки рандомно у них уже есть свой phi и r -> аккумулируем
-3) Gradient direction  -> phi
-
-
-'''
-
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
 
-img = cv2.cvtColor(cv2.imread('empire.jpg'), cv2.COLOR_BGR2RGB)
+img = cv2.cvtColor(cv2.imread('go_board.jpg'), cv2.COLOR_BGR2RGB)
 plt.title('RGB image with shape (%d,%d,%d)' % img.shape)
 plt.imshow(img)
 plt.show()
@@ -75,11 +37,17 @@ plt.title('Edge binary image')
 plt.imshow(img, cmap='gray')
 plt.show()
 
-rho_max = np.sqrt(img.shape[0]**2 + img.shape[1]**2)
-rho_list = np.linspace(0, rho_max, 100)
-phi_list = np.linspace(-np.pi/2, np.pi, 100)
 
-Accumulator = np.zeros((100, 100))
+
+
+rho_num = 300
+phi_num = 300
+
+rho_max = np.sqrt(img.shape[0]**2 + img.shape[1]**2)
+rho_list = np.linspace(0, rho_max, rho_num)
+phi_list = np.linspace(-np.pi/2, np.pi, phi_num)
+
+Accumulator = np.zeros((rho_num, phi_num))
 
 for y in range(img.shape[0]):
     for x in range(img.shape[1]):
@@ -88,24 +56,58 @@ for y in range(img.shape[0]):
 
         for phi_ind, phi in enumerate(phi_list):
             rho = x * np.cos(phi) + y * np.sin(phi)
-            rho_ind = int((rho / rho_max) * 100)
+            if rho < 0:
+                continue
+            rho_ind = int((rho / rho_max) * rho_num)
             Accumulator[rho_ind, phi_ind] += 1
 
+plt.title('Accumulator')
+plt.imshow(Accumulator, cmap='gray')
+plt.show()
+
+# Non-maximum suppression
+size = 50 #window
+for partx in range(int(rho_num / size)):
+    for party in range(int(phi_num / size)):
+        x1 = partx * size
+        x2 = (partx + 1) * size
+        y1 = party * size
+        y2 = (party + 1) * size
+
+        ind = np.unravel_index(np.argmax(Accumulator[x1:x2, y1:y2], axis=None), Accumulator[x1:x2, y1:y2].shape)
+        ind = [ind[0] + partx * size, ind[1] + party * size]
+        value = Accumulator[ind[0], ind[1]]
+
+        Accumulator[x1:x2, y1:y2] = 0
+        Accumulator[ind[0], ind[1]] = value
+
+        print(ind, Accumulator[ind[0], ind[1]])
+
+plt.title('NMS Accumulator')
+plt.imshow(Accumulator, cmap='gray')
+plt.show()
 
 
-for rho_ind in range(100):
-    for phi_ind in range(100):
+
+
+
+for rho_ind in range(rho_num):
+    for phi_ind in range(phi_num):
         if Accumulator[rho_ind, phi_ind] == 0:
             continue
 
-        # y * Sin(phi) = rho - x Cos(phi)
-        # y = (rho - x Cos(phi)) / sin(phi)
-        y1 = int((rho_list[rho_ind] + 100 * np.cos(phi_list[phi_ind])) / (np.sin(phi_list[phi_ind])+0.00000001))
-        y2 = int((rho_list[rho_ind] - 100 * np.cos(phi_list[phi_ind])) / (np.sin(phi_list[phi_ind])+0.00000001))
+        x1 = int(rho_list[rho_ind] / (np.cos(phi_list[phi_ind]) + 0.00000001))
+        y1 = 0
 
-        print(y1, y2)
+        x2 = 0
+        y2 = int(rho_list[rho_ind] / (np.sin(phi_list[phi_ind]) + 0.00000001))
 
-        cv2.line(IMG, (-100, y1), (100, y2), (0, 255, 0), 1)
+        # Отсекаем линии параллельные к осям
+        if abs(x1) > 1000000 or abs(y2) > 1000000:
+            print('x1 or y2 is high')
+            continue
+
+        cv2.line(IMG, (x1, y1), (x2, y2), (0, 255, 0), 1)
 
 plt.title('Lines')
 plt.imshow(IMG, cmap='gray')

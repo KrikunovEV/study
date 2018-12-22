@@ -34,29 +34,9 @@ ymaps.ready(function () {
     // в случае успеха создает плеер с найденной панорамой.
     ymaps.panorama.createPlayer(
        'player2',
-       [55.794023, 49.149717],
+       [55.792913, 49.117929],
        // Ищем воздушную панораму.
-       { layer: 'yandex#Panorama' }
-    )
-        .done(function (player) {
-            // player – это ссылка на экземпляр плеера.
-        });
-		
-	ymaps.panorama.createPlayer(
-       'player3',
-       [55.828063, 49.106408],
-       // Ищем воздушную панораму.
-       { layer: 'yandex#Panorama' }
-    )
-        .done(function (player) {
-            // player – это ссылка на экземпляр плеера.
-        });
-	
-	ymaps.panorama.createPlayer(
-       'player4',
-       [55.824284, 49.090412],
-       // Ищем воздушную панораму.
-       { layer: 'yandex#Panorama' }
+       { layer: 'yandex#panorama' }
     )
         .done(function (player) {
             // player – это ссылка на экземпляр плеера.

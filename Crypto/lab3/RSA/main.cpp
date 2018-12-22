@@ -6,7 +6,7 @@
 using namespace std;
 
 HWND hwButton_PAE;
-HWND hwEdit_q, hwEdit_p, hwEdit_text, hwEdit_encoded, hwEdit_decoded;
+HWND hwEdit_q, hwEdit_p, hwEdit_text, hwEdit_encoded, hwEdit_decoded, hwEdit_e, hwEdit_d;
 
 #define hmButtonEncode (HMENU)1
 
@@ -22,7 +22,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	{
 		CreateWindow("STATIC", "Text:", WS_CHILD | WS_VISIBLE, 15, 15, 300, 30, hWnd, NULL, NULL, NULL);
 		CreateWindow("STATIC", "q:", WS_CHILD | WS_VISIBLE, 15, 45, 50, 30, hWnd, NULL, NULL, NULL);
+		CreateWindow("STATIC", "e:", WS_CHILD | WS_VISIBLE, 100, 45, 50, 30, hWnd, NULL, NULL, NULL);
 		CreateWindow("STATIC", "p:", WS_CHILD | WS_VISIBLE, 15, 75, 50, 30, hWnd, NULL, NULL, NULL);
+		CreateWindow("STATIC", "d:", WS_CHILD | WS_VISIBLE, 100, 75, 50, 30, hWnd, NULL, NULL, NULL);
 		CreateWindow("STATIC", "Зашифрованное:", WS_CHILD | WS_VISIBLE, 15, 180, 300, 30, hWnd, NULL, NULL, NULL);
 		CreateWindow("STATIC", "Расшифрованное:", WS_CHILD | WS_VISIBLE, 15, 240, 300, 30, hWnd, NULL, NULL, NULL);
 
@@ -30,7 +32,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 		hwEdit_text = CreateWindow("EDIT", "Hello, my friend !", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 50, 15, 300, 20, hWnd, NULL, NULL, NULL);
 		hwEdit_q = CreateWindow("EDIT", "512", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 30, 45, 50, 20, hWnd, NULL, NULL, NULL);
+		hwEdit_e = CreateWindow("EDIT", "", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 120, 45, 250, 20, hWnd, NULL, NULL, NULL);
 		hwEdit_p = CreateWindow("EDIT", "256", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 30, 75, 50, 20, hWnd, NULL, NULL, NULL);
+		hwEdit_d = CreateWindow("EDIT", "", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 120, 75, 250, 20, hWnd, NULL, NULL, NULL);
 		hwEdit_encoded = CreateWindow("EDIT", "", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 15, 210, 300, 20, hWnd, NULL, NULL, NULL);
 		hwEdit_decoded = CreateWindow("EDIT", "", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 15, 270, 300, 20, hWnd, NULL, NULL, NULL);
 
@@ -41,7 +45,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	case WM_COMMAND:
 	{
 		if (LOWORD(wParam) == (int)hmButtonEncode)
-			RSA(hwEdit_q, hwEdit_p, hwEdit_text, hwEdit_encoded, hwEdit_decoded);
+			RSA(hwEdit_q, hwEdit_p, hwEdit_text, hwEdit_encoded, hwEdit_decoded, hwEdit_e, hwEdit_d);
 
 		break;
 	}

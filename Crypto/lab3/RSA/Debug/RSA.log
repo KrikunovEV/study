@@ -1,9 +1,9 @@
 ﻿  Algo.cpp
-c:\users\evgenii\desktop\study\study\crypto\lab3\rsa\algo.cpp(68): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\evgenii\desktop\study\study\crypto\lab3\rsa\algo.cpp(73): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\evgenii\desktop\study\study\crypto\lab3\rsa\algo.cpp(77): warning C4244: =: преобразование "long" в "char", возможна потеря данных
-c:\users\evgenii\desktop\study\study\crypto\lab3\rsa\algo.cpp(81): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\evgenii\desktop\study\study\crypto\lab3\rsa\algo.cpp(85): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\evgenii\desktop\study\study\crypto\lab3\rsa\algo.cpp(89): warning C4244: =: преобразование "long" в "char", возможна потеря данных
-c:\users\evgenii\desktop\study\study\crypto\lab3\rsa\algo.cpp(134): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
+c:\users\evgenii\desktop\study\study\crypto\lab3\rsa\algo.cpp(90): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\evgenii\desktop\study\study\crypto\lab3\rsa\algo.cpp(95): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\evgenii\desktop\study\study\crypto\lab3\rsa\algo.cpp(99): warning C4244: =: преобразование "long" в "char", возможна потеря данных
+c:\users\evgenii\desktop\study\study\crypto\lab3\rsa\algo.cpp(103): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\evgenii\desktop\study\study\crypto\lab3\rsa\algo.cpp(107): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\evgenii\desktop\study\study\crypto\lab3\rsa\algo.cpp(111): warning C4244: =: преобразование "long" в "char", возможна потеря данных
+c:\users\evgenii\desktop\study\study\crypto\lab3\rsa\algo.cpp(156): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
   RSA.vcxproj -> C:\Users\Evgenii\Desktop\study\study\Crypto\lab3\Debug\RSA.exe

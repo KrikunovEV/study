@@ -6,4 +6,4 @@
 #pragma comment(lib, "gmp.lib")
 using namespace std;
 
-void Vzlom(HWND hwB, HWND hwN, HWND hwP, HWND hwQ, HWND hwE, HWND hwD);
+void Vzlom(HWND hwB, HWND hwN, HWND hwP, HWND hwQ, HWND hwE, HWND hwD, HWND hwDecode);

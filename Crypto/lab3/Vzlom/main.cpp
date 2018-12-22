@@ -6,7 +6,7 @@
 using namespace std;
 
 HWND hwButton_GO;
-HWND hwEdit_N, hwEdit_B, hwEdit_p, hwEdit_q, hwEdit_e, hwEdit_d;
+HWND hwEdit_N, hwEdit_B, hwEdit_p, hwEdit_q, hwEdit_e, hwEdit_d, hwEdit_decode;
 
 #define hmButtonEncode (HMENU)1
 
@@ -26,6 +26,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		CreateWindow("STATIC", "q:", WS_CHILD | WS_VISIBLE, 15, 240, 50, 30, hWnd, NULL, NULL, NULL);
 		CreateWindow("STATIC", "е:", WS_CHILD | WS_VISIBLE, 15, 300, 50, 30, hWnd, NULL, NULL, NULL);
 		CreateWindow("STATIC", "d:", WS_CHILD | WS_VISIBLE, 15, 360, 50, 30, hWnd, NULL, NULL, NULL);
+		CreateWindow("STATIC", "Декод:", WS_CHILD | WS_VISIBLE, 15, 400, 50, 30, hWnd, NULL, NULL, NULL);
 
 		hwButton_GO = CreateWindow("BUTTON", "Вперёд !", BS_PUSHBUTTON | WS_VISIBLE | WS_CHILD, 15, 100, 200, 40, hWnd, hmButtonEncode, NULL, NULL);
 
@@ -35,6 +36,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		hwEdit_q = CreateWindow("EDIT", "", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 50, 240, 300, 20, hWnd, NULL, NULL, NULL);
 		hwEdit_e = CreateWindow("EDIT", "", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 50, 300, 300, 20, hWnd, NULL, NULL, NULL);
 		hwEdit_d = CreateWindow("EDIT", "", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 50, 360, 300, 20, hWnd, NULL, NULL, NULL);
+		hwEdit_decode = CreateWindow("EDIT", "", WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER, 50, 400, 300, 20, hWnd, NULL, NULL, NULL);
 
 		break;
 	}
@@ -43,7 +45,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	case WM_COMMAND:
 	{
 		if (LOWORD(wParam) == (int)hmButtonEncode)
-			Vzlom(hwEdit_B, hwEdit_N, hwEdit_p, hwEdit_q, hwEdit_e, hwEdit_d);
+			Vzlom(hwEdit_B, hwEdit_N, hwEdit_p, hwEdit_q, hwEdit_e, hwEdit_d, hwEdit_decode);
 
 		break;
 	}

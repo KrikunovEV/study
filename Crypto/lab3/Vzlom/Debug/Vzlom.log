@@ -1,3 +1,4 @@
 ﻿  Algo.cpp
-c:\users\evgeniy\desktop\study\study\crypto\lab3\vzlom\algo.cpp(100): warning C4018: <: несоответствие типов со знаком и без знака
-  Vzlom.vcxproj -> C:\Users\Evgeniy\Desktop\study\study\Crypto\lab3\Debug\Vzlom.exe
+c:\users\evgenii\desktop\study\study\crypto\lab3\vzlom\algo.cpp(103): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\evgenii\desktop\study\study\crypto\lab3\vzlom\algo.cpp(188): warning C4018: <: несоответствие типов со знаком и без знака
+  Vzlom.vcxproj -> C:\Users\Evgenii\Desktop\study\study\Crypto\lab3\Debug\Vzlom.exe

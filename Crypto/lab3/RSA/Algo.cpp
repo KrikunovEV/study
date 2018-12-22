@@ -1,7 +1,21 @@
 #include "Algo.h"
 
-void RSA(HWND hwq, HWND hwp, HWND hwtext, HWND hwencoded, HWND hwdecoded)
+void RSA(HWND hwq, HWND hwp, HWND hwtext, HWND hwencoded, HWND hwdecoded, HWND hwE, HWND hwD)
 {
+	/*
+	10001:
+	p = 73
+	q = 137
+	e = 7
+	d = 1399
+
+	163237:
+	p = 683
+	q = 239
+	e = 7
+	d = 1
+	*/
+
 	gmp_randstate_t rstate;
 	gmp_randinit_default(rstate);
 	
@@ -15,6 +29,8 @@ void RSA(HWND hwq, HWND hwp, HWND hwtext, HWND hwencoded, HWND hwdecoded)
 	mpz_init(p);
 	mpz_urandomb(p, rstate, pbit);
 	mpz_nextprime(p, p);
+	//mpz_set_si(p, 683);
+	//mpz_set_si(p, 73);
 
 	GetWindowText(hwq, f, 100);
 	int qbit = atoi(f);
@@ -22,6 +38,8 @@ void RSA(HWND hwq, HWND hwp, HWND hwtext, HWND hwencoded, HWND hwdecoded)
 	mpz_init(q);
 	mpz_urandomb(q, rstate, qbit);
 	mpz_nextprime(q, q);
+	//mpz_set_si(q, 239);
+	//mpz_set_si(q, 137);
 
 	char debug[1000];
 	char str[1000] = { 0 };
@@ -61,6 +79,11 @@ void RSA(HWND hwq, HWND hwp, HWND hwtext, HWND hwencoded, HWND hwdecoded)
 	if (mpz_cmp_si(d, 0) < 0)
 		mpz_add(d, d, phi);
 
+	char str2[100000];
+	mpz_get_str(str2, 10, e);
+	SetWindowText(hwE, str2);
+	mpz_get_str(str2, 10, d);
+	SetWindowText(hwD, str2);
 
 	mpz_t* encrypted = new mpz_t[strlen(text)];
 	char* encrypted_text = new char[strlen(text)];

@@ -10,7 +10,7 @@
 
 using namespace std;
 
-void RSA(HWND hwq, HWND hwp, HWND hwtext, HWND hwencoded, HWND hwdecoded);
+void RSA(HWND hwq, HWND hwp, HWND hwtext, HWND hwencoded, HWND hwdecoded, HWND hwE, HWND hwD);
 
 bool IsPrime(long long n);
 

@@ -2,8 +2,69 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8f31ab9-f1f6-4d69-bdbd-5e5bca75acdd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/Solution.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/Solution.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/ipch/AutoPCH/104111683ba722b5/ALGO.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/ipch/AutoPCH/104111683ba722b5/ALGO.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/ipch/AutoPCH/4cf0fe609a552f6b/MAIN.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/ipch/AutoPCH/4cf0fe609a552f6b/MAIN.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/ipch/AutoPCH/6102778f7fc04d27/ALGO.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/ipch/AutoPCH/6102778f7fc04d27/ALGO.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/ipch/AutoPCH/cb84a8f23fa661d9/MAIN.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/.vs/lab3/v15/ipch/AutoPCH/cb84a8f23fa661d9/MAIN.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Debug/RSA.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Debug/RSA.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Debug/RSA.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Debug/RSA.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Debug/RSA.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Debug/RSA.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Debug/Vzlom.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Debug/Vzlom.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Debug/Vzlom.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Debug/Vzlom.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Debug/Vzlom.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Debug/Vzlom.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Algo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Algo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Algo.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Algo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Debug/Algo.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Debug/Algo.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Debug/RSA.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Debug/RSA.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Debug/RSA.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Debug/RSA.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Debug/RSA.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Debug/RSA.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Debug/RSA.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Debug/RSA.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Debug/RSA.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Debug/RSA.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Debug/vc141.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Debug/vc141.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Debug/vc141.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/RSA/Debug/vc141.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/RSA/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/RSA/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Algo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Algo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Algo.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Algo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/Algo.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/Algo.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/Vzlom.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/Vzlom.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/Vzlom.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/Vzlom.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/Vzlom.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/Vzlom.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/Vzlom.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/Vzlom.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/Vzlom.tlog/Vzlom.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/Vzlom.tlog/Vzlom.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/Vzlom.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/Vzlom.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/Vzlom.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/Vzlom.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/vc141.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/vc141.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/vc141.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/Debug/vc141.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Crypto/lab3/Vzlom/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GIS/panoramas/panorama_basics.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../GIS/panoramas/panorama_basics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GIS/panoramas/panorama_basics.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../GIS/panoramas/panorama_basics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/.vs/MPIHelloWorld/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/.vs/MPIHelloWorld/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/.vs/MPIHelloWorld/v15/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/.vs/MPIHelloWorld/v15/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/.vs/MPIHelloWorld/v15/Browse.VC.opendb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.tlog/MPIHelloWorld.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.tlog/MPIHelloWorld.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/vc141.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/vc141.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/vc141.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/Debug/vc141.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../MPI/MPIHelloWorld(x32)/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../Parallel/.vs/Parallel/v15/Browse.VC.db" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,9 +76,11 @@
     <session id="-2100404136">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -32,23 +95,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2213" />
+          <entry key="py" value="3679" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2213" />
+          <entry key="Python" value="3679" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="100" column="41" lean-forward="true" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
+            <state relative-caret-position="136">
+              <caret line="32" column="27" lean-forward="true" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
               <folding>
                 <element signature="e#904#922#0" expanded="true" />
               </folding>
@@ -156,13 +219,9 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
@@ -170,6 +229,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -183,16 +246,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="19" selection-start-line="19" selection-end-line="22" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="100" column="41" lean-forward="true" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
+        <state relative-caret-position="136">
+          <caret line="32" column="27" lean-forward="true" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
           <folding>
             <element signature="e#904#922#0" expanded="true" />
           </folding>

@@ -1,7 +1,7 @@
 #include "Algo.h"
 
 
-void Vzlom(HWND hwB, HWND hwN, HWND hwP, HWND hwQ, HWND hwE, HWND hwD)
+void Vzlom(HWND hwB, HWND hwN, HWND hwP, HWND hwQ, HWND hwE, HWND hwD, HWND hwDecode)
 {
 	char filler[100];
 
@@ -12,6 +12,7 @@ void Vzlom(HWND hwB, HWND hwN, HWND hwP, HWND hwQ, HWND hwE, HWND hwD)
 	GetWindowText(hwN, filler, 100);
 	mpz_t n;
 	mpz_init_set_si(n, atoi(filler));// 10001 (1 stage), 163237 (2 stage)
+	mpz_init_set_str(n, "344572667627327574872986520507", 10);
 
 	mpz_t M;
 	mpz_init_set_si(M, 1);
@@ -95,6 +96,8 @@ void Vzlom(HWND hwB, HWND hwN, HWND hwP, HWND hwQ, HWND hwE, HWND hwD)
 			mpz_nextprime(prime, prime);
 		} while (mpz_cmp(prime, B2) < 0);
 		
+		char str2[10000] = { 0 };
+
 		mpz_t c;
 		mpz_init(c);
 		for (int i = 0; i < primes.size(); i++)
@@ -106,7 +109,7 @@ void Vzlom(HWND hwB, HWND hwN, HWND hwP, HWND hwQ, HWND hwE, HWND hwD)
 			mpz_init(d);
 			mpz_gcd(d, n, c);
 
-			//sprintf_s(str2, "%sb = %ld, delta_pow = %ld, c = %ld ~ d = %ld\n", str2, mpz_get_si(b), mpz_get_si(*primes[i]), mpz_get_si(c), mpz_get_si(d));
+			//sprintf_s(str2, "%sd = %ld _ ", str2, mpz_get_si(d));
 
 			if (mpz_cmp_si(d, 1) != 0)
 			{
@@ -125,6 +128,8 @@ void Vzlom(HWND hwB, HWND hwN, HWND hwP, HWND hwQ, HWND hwE, HWND hwD)
 			}
 		}
 
+		//MessageBox(0, str2, 0, 0);
+
 		if (!found)
 		{
 			MessageBox(0, "Не разложил", 0, MB_OK);
@@ -141,13 +146,14 @@ void Vzlom(HWND hwB, HWND hwN, HWND hwP, HWND hwQ, HWND hwE, HWND hwD)
 	// NOD (n, e) = 1,  2 <= e < phi
 	mpz_t e;
 	mpz_init_set_si(e, 7);
-	for (; mpz_cmp(e, phi) < 0; mpz_nextprime(e, e)) {
+	mpz_init_set_str(e, "303498613397661458186613409505", 10);
+	/*for (; mpz_cmp(e, phi) < 0; mpz_nextprime(e, e)) {
 		mpz_t NOD;
 		mpz_init(NOD);
 		mpz_gcd(NOD, e, n);
 		if (mpz_cmp_si(NOD, 1) == 0)
 			break;
-	}
+	}*/
 
 	// e * d + phi * y = 1
 	mpz_t x, y, d;
@@ -166,4 +172,38 @@ void Vzlom(HWND hwB, HWND hwN, HWND hwP, HWND hwQ, HWND hwE, HWND hwD)
 
 	mpz_get_str(str, 10, d);
 	SetWindowText(hwD, str);
+
+	mpz_t SW;
+	mpz_init_set_str(SW, "42393687358080034300726554172", 10);
+
+	mpz_powm(SW, SW, d, n);
+
+	mpz_get_str(str, 10, SW);
+
+	char decode[100];
+	for (int i = 0; i < 100; i++)
+		decode[i] = 0;
+
+	//16 61 66 56 49 56 30 66 56 58
+	for (int i = 0; i < strlen(str); i += 2)
+	{
+		char ch = (str[i] - '0') * 10 + (str[i + 1] - '0');
+		
+		if (ch == 16)
+			decode[i / 2] = 'А';
+		else if (ch == 61)
+			decode[i / 2] = 'н';
+		else if (ch == 66)
+			decode[i / 2] = 'т';
+		else if (ch == 56)
+			decode[i / 2] = 'и';
+		else if (ch == 49)
+			decode[i / 2] = 'б';
+		else if (ch == 30)
+			decode[i / 2] = 'О';
+		else if (ch == 58)
+			decode[i / 2] = 'к';
+	}
+	
+	SetWindowText(hwDecode, decode);
 }
