@@ -1,0 +1,6 @@
+﻿  main.cpp
+c:\users\evgeniy\desktop\study\study\encoding\3des\varshamov\main.cpp(22): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+c:\users\evgeniy\desktop\study\study\encoding\3des\varshamov\main.cpp(165): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\evgeniy\desktop\study\study\encoding\3des\varshamov\main.cpp(13): warning C4018: <: несоответствие типов со знаком и без знака
+  c:\users\evgeniy\desktop\study\study\encoding\3des\varshamov\main.cpp(30): note: выполняется компиляция ссылки на экземпляр шаблон функции "int weight<4>(std::bitset<4>,int)"
+  Varshamov.vcxproj -> C:\Users\Evgeniy\Desktop\study\study\Encoding\3DES\Debug\Varshamov.exe

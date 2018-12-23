@@ -1,29 +1,35 @@
 #include <iostream>
-#include <bitset>
-// СОКОЛОВИЧ глава 6.4
 using namespace std;
 
 
-void encode(int* g, int gk, int* data, int k, int* encoded_data)
+void Print(int* a, int len)
 {
-	for (int i = 0; i < gk; i++)
-		if (g[i] != 0)
-			for (int j = 0; j < k; j++)
-				if (data[j] != 0)
-					encoded_data[i+j] += 1;
-
-	for (int i = 0; i < gk + k; i++)
-		encoded_data[i] %= 2;
+	for (int i = len - 1; i >= 0; i--)
+		cout << a[i];
+	cout << endl;
 }
 
 
-void decode(int* g, int gk, int* encoded_data, int datak, int* data)
+void encode(int* g, int glen, int* data, int datalen, int* encoded_data)
 {
+	for (int i = 0; i < glen; i++)
+		if (g[i] != 0)
+			for (int j = 0; j < datalen; j++)
+				if (data[j] != 0)
+					encoded_data[i+j] = (encoded_data[i + j] + 1) % 2;
+}
+
+
+void decode(int* g, int glen, int* encoded_data, int enc_datalen, int* data)
+{
+	int* temp = new int[enc_datalen];
+	memcpy(temp, encoded_data, enc_datalen * 4);
+
 	while (true)
 	{
 		int maxdeg = -1;
 
-		for (int i = datak - 1; i >= 0; i--)
+		for (int i = enc_datalen - 1; i >= 0; i--)
 		{
 			if (encoded_data[i] != 0)
 			{
@@ -32,27 +38,52 @@ void decode(int* g, int gk, int* encoded_data, int datak, int* data)
 			}
 		}
 
-
 		if (maxdeg == -1)
 		{
 			cout << "No errors" << endl;
-			return;
+			break;
 		}
-		else if (maxdeg < gk - 1)
+		else if (maxdeg < glen - 1)
 		{
-			cout << "There is errors" << endl;
-			return;
+			cout << endl << "There is errors" << endl << "Mod: ";
+			Print(encoded_data, enc_datalen);
+
+			int ones = 0;
+			for (int i = 0; i <= maxdeg; i++)
+				if (encoded_data[i] == 1)
+					ones++;
+
+			// Исправляем две ошибки
+			if (ones <= 2)
+			{
+				for (int i = 0; i <= maxdeg; i++)
+					temp[i] = (temp[i] + encoded_data[i]) % 2;
+				cout << "Corrected: ";
+				Print(temp, enc_datalen);
+
+				decode(g, glen, temp, enc_datalen, data);
+			}
+			else
+			{
+				cout << "More than 2 errors" << endl;
+				memset(data, 0, (enc_datalen - glen) * 4);
+			}
+
+			break;
 		}
 
-		int deg = maxdeg - (gk - 1);
+		// Деление столбиком
+		int deg = maxdeg - (glen - 1);
 		data[deg] = 1;
-		for (int i = gk - 1; i >= 0; i--)
+		for (int i = glen - 1; i >= 0; i--)
 		{
 			encoded_data[i + deg] -= g[i];
 			if (encoded_data[i + deg] < 0)
 				encoded_data[i + deg] = -encoded_data[i + deg];
 		}
 	}
+
+	delete[] temp;
 }
 
 
@@ -65,45 +96,42 @@ int main()
 
 	cout << "Code is (" << n << "," << k << "," << d << ")" << endl;
 
-	int* g = new int[9];
-	for (int i = 8; i >= 0; i--)
-		g[i] = 0;
+
+	int* g = new int[n - k + 1];
+	memset(g, 0, (n - k + 1) * 4);
 	g[0] = g[4] = g[6] = g[7] = g[8] = 1;
 	cout << "g(x) = ";
-	for (int i = 8; i >= 0; i--)
-		cout << g[i];
-	cout << endl;
+	Print(g, n - k + 1);
+
 
 	int* data = new int[k];
-	for (int i = 0; i < k; i++)
-		data[i] = 0;
+	memset(data, 0, k * 4);
 	data[0] = data[1] = data[5] = data[6] = 1;
 	cout << "data(x) = ";
-	for (int i = k - 1; i >= 0; i--)
-		cout << data[i];
-	cout << endl;
+	Print(data, k);
 
 
-	int len = 9 + k - 1;
-	int* encoded_data = new int[len];
-	for (int i = 0; i < len; i++)
-		encoded_data[i] = 0;
+	int* encoded_data = new int[n];
+	memset(encoded_data, 0, n * 4);
 	encode(g, 9, data, k, encoded_data);
-	for (int i = len - 1; i >= 0; i--)
-		cout << encoded_data[i];
-	cout << endl;
+	cout << "Encoded: ";
+	Print(encoded_data, n);
 
 
-	for (int i = 0; i < k; i++)
-		data[i] = 0;
-	encoded_data[2] = encoded_data[4] = 1;
-	decode(g, 9, encoded_data, len, data);
-	for (int i = k - 1; i >= 0; i--)
-		cout << data[i];
+	encoded_data[2] = encoded_data[6] = 1;
+	cout << "Make errors: ";
+	Print(encoded_data, n);
+
+
+	memset(data, 0, k * 4);
+	decode(g, n - k + 1, encoded_data, n, data);
+	cout << "Decoded: ";
+	Print(data, k);
 	cout << endl;
 
 
 	delete[] data;
+	delete[] encoded_data;
 	delete[] g;
 
 	system("pause");
