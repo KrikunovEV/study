@@ -36,7 +36,7 @@ int main()
 	}
 
 
-	bitset<n + 1> word("01100");
+	bitset<n - 1> word("010");
 	cout << endl << "Get word: " << word.to_string() << endl;
 
 	bitset<n> correct;

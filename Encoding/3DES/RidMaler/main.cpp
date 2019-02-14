@@ -31,8 +31,6 @@ void PrintMatrix(int** matrix, int n, int m);
 
 int main()
 {
-	cout << "SHAAAAAAAAAAAAAAAAA-1" << endl;
-
 	int m = 4;
 	int n = 16;
 
@@ -104,6 +102,10 @@ int main()
 	encode[10] = encode[10] ? 0 : 1;
 	encode[11] = encode[11] ? 0 : 1;
 	encode[15] = encode[15] ? 0 : 1;
+	cout << "Make errors: ";
+	for (int i = 0; i < n; i++)
+		cout << encode[i];
+	cout << endl;
 
 
 

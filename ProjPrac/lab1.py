@@ -1,4 +1,5 @@
 import math
+import unittest
 
 def solve(a, b, c):
 
@@ -26,23 +27,33 @@ def solve(a, b, c):
 
     D = math.sqrt(D)
 
-    return (True, (-b-D)/(2*a), (-b+D)/(2*a))
+    return True, (-b - D) / (2 * a), (-b + D) / (2 * a)
 
-#Test cases
-(res, x1, x2) = solve(0, 0, 0)
-print("Test case 1:\na = 0, b = 0, c = 0; solve = " + str(res) + ", x1 = " + str(x1) + ", x2 = " + str(x2) + "\n")
+class TestStringMethods(unittest.TestCase):
 
-(res, x1, x2) = solve(0, 0, 1)
-print("Test case 2:\na = 0, b = 0, c = 1; solve = " + str(res) + ", x1 = " + str(x1) + ", x2 = " + str(x2) + "\n")
+    def test_abc_equal_zero(self):
+        actual_result = solve(0, 0, 0)
+        self.assertEqual((True, 0, 0), actual_result)
 
-(res, x1, x2) = solve(0, 1, 5)
-print("Test case 3:\na = 0, b = 1, c = 5; solve = " + str(res) + ", x1 = " + str(x1) + ", x2 = " + str(x2) + "\n")
+    def test_ab_equal_zero(self):
+        actual_result = solve(0, 0, 1)
+        self.assertEqual((False, 0, 0), actual_result)
 
-(res, x1, x2) = solve(5, 1, 10)
-print("Test case 4:\na = 5, b = 1, c = 10; solve = " + str(res) + ", x1 = " + str(x1) + ", x2 = " + str(x2) + "\n")
+    def test_a_equal_zero(self):
+        actual_result = solve(0, 1, 5)
+        self.assertEqual((True, -5, -5), actual_result)
 
-(res, x1, x2) = solve(1, 5, 2)
-print("Test case 5:\na = 1, b = 5, c = 2; solve = " + str(res) + ", x1 = " + str(x1) + ", x2 = " + str(x2) + "\n")
+    def test_negative_D(self):
+        actual_result = solve(5, 1, 10)
+        self.assertEqual((False, 0, 0), actual_result)
 
-(res, x1, x2) = solve(1, 2, 1)
-print("Test case 6:\na = 1, b = 2, c = 1; solve = " + str(res) + ", x1 = " + str(x1) + ", x2 = " + str(x2) + "\n")
+    def test_D_zero(self):
+        actual_result = solve(1, 2, 1)
+        self.assertEqual((True, -1, -1), actual_result)
+
+    def test_positive_D(self):
+        actual_result = solve(1, 3, 2)
+        self.assertEqual((True, -2, -1), actual_result)
+
+if __name__ == '__main__':
+    unittest.main()
