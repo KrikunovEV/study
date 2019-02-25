@@ -2,64 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88c195e6-43e2-4612-b0fa-892c53b6a53b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/.vs/3DES/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/.vs/3DES/v15/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/.vs/3DES/v15/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/.vs/3DES/v15/Browse.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/.vs/3DES/v15/Solution.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/.vs/3DES/v15/Solution.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/.vs/3DES/v15/ipch/AutoPCH/e9f0df0996ad069a/MAIN.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/.vs/3DES/v15/ipch/AutoPCH/e9f0df0996ad069a/MAIN.ipch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/BCH.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/BCH.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/BCH.tlog/BCH.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/BCH.tlog/BCH.lastbuildstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/BCH.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/BCH.tlog/CL.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/BCH.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/BCH.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/BCH.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/BCH.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/BCH.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/BCH.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/BCH.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/BCH.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/vc141.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/vc141.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/vc141.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/BCH/Debug/vc141.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Debug/BCH.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Debug/BCH.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Debug/BCH.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Debug/BCH.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Debug/BCH.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Debug/BCH.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Debug/RidMaler.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Debug/RidMaler.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Debug/RidMaler.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Debug/RidMaler.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Debug/RidMaler.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Debug/RidMaler.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Debug/Varshamov.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Debug/Varshamov.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Debug/Varshamov.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Debug/Varshamov.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Debug/Varshamov.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Debug/Varshamov.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/RidMaler.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/RidMaler.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/RidMaler.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/RidMaler.tlog/CL.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/RidMaler.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/RidMaler.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/RidMaler.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/RidMaler.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/RidMaler.tlog/RidMaler.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/RidMaler.tlog/RidMaler.lastbuildstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/RidMaler.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/RidMaler.tlog/link.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/RidMaler.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/RidMaler.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/RidMaler.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/RidMaler.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/vc141.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/vc141.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/vc141.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/Debug/vc141.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/RidMaler/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/Varshamov.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/Varshamov.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/Varshamov.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/Varshamov.tlog/CL.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/Varshamov.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/Varshamov.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/Varshamov.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/Varshamov.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/Varshamov.tlog/Varshamov.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/Varshamov.tlog/Varshamov.lastbuildstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/Varshamov.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/Varshamov.tlog/link.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/Varshamov.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/Varshamov.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/Varshamov.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/Varshamov.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/vc141.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/vc141.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/vc141.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/Debug/vc141.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Encoding/3DES/Varshamov/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/.vs/MPIHelloWorld/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/.vs/MPIHelloWorld/v15/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/.vs/MPIHelloWorld/v15/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/.vs/MPIHelloWorld/v15/Browse.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/Debug/MPIHelloWorld.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/Debug/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/Debug/vc141.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/Debug/vc141.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/Debug/vc141.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/Debug/vc141.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../MPI/MPIHelloWorld(x32)/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ProjPrac.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProjPrac.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,36 +46,38 @@
     <session id="281893782">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.42" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.45" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="py" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="1" />
+          <entry key="Python" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="494" />
+          <entry key="py" value="714" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="494" />
+          <entry key="Python" value="714" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lab1.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="157">
@@ -143,11 +90,24 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TDD.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <marker date="1551084335388" expanded="true" signature="29:124" ph="..." />
+                <marker date="1551084335388" expanded="true" signature="167:296" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/unit test simple example (Calc).py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+            <state relative-caret-position="305">
+              <caret line="26" selection-start-line="26" selection-end-line="26" selection-end-column="43" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -172,14 +132,15 @@
       <list>
         <option value="$PROJECT_DIR$/unit test simple example (Calc).py" />
         <option value="$PROJECT_DIR$/lab1.py" />
+        <option value="$PROJECT_DIR$/TDD.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="380" />
-    <option name="y" value="4" />
+    <option name="x" value="-8" />
+    <option name="y" value="1" />
     <option name="width" value="974" />
-    <option name="height" value="920" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -187,7 +148,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,10 +159,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ReinfocementLearning/nstepTD_A3C_SpaceInvaders" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ReinforcementLearning/nstepTD_A2C_SC2_MineralShards" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -216,7 +178,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.lab1">
+  <component name="RunManager" selected="Python tests.pytest in TDD.py">
     <configuration name="lab1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ProjPrac" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -238,22 +200,22 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for unit test simple example (Calc).TestStringMethods" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="Unnamed" type="tests" factoryName="Nosetests">
       <module name="ProjPrac" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="C:\Users\Evgenii\AppData\Local\Programs\Python\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;unit test simple example (Calc).TestStringMethods&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for unit test simple example (Calc).TestStringMethods.test_mul" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for TDD.TestStringMethods.test_roman" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="ProjPrac" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -264,11 +226,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;unit test simple example (Calc).TestStringMethods.test_mul&quot;" />
+      <option name="_new_target" value="&quot;TDD.TestStringMethods.test_roman&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for unit test simple example (Calc).TestStringMethods.test_sum" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest in TDD.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="ProjPrac" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -279,39 +241,21 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;unit test simple example (Calc).TestStringMethods.test_sum&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest in unit test simple example (Calc).py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="ProjPrac" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/unit test simple example (Calc).py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/TDD.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python tests.Unnamed" />
       <item itemvalue="Python.lab1" />
-      <item itemvalue="Python tests.pytest for unit test simple example (Calc).TestStringMethods.test_sum" />
-      <item itemvalue="Python tests.pytest for unit test simple example (Calc).TestStringMethods.test_mul" />
-      <item itemvalue="Python tests.pytest for unit test simple example (Calc).TestStringMethods" />
-      <item itemvalue="Python tests.pytest in unit test simple example (Calc).py" />
+      <item itemvalue="Python tests.pytest in TDD.py" />
+      <item itemvalue="Python tests.pytest for TDD.TestStringMethods.test_roman" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in TDD.py" />
+        <item itemvalue="Python tests.pytest for TDD.TestStringMethods.test_roman" />
         <item itemvalue="Python.lab1" />
-        <item itemvalue="Python tests.pytest in unit test simple example (Calc).py" />
-        <item itemvalue="Python tests.pytest for unit test simple example (Calc).TestStringMethods" />
-        <item itemvalue="Python tests.pytest for unit test simple example (Calc).TestStringMethods.test_mul" />
-        <item itemvalue="Python tests.pytest for unit test simple example (Calc).TestStringMethods.test_sum" />
       </list>
     </recent_temporary>
   </component>
@@ -329,32 +273,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_1__unit_test_simple_example_(Calc)_py - 2019.02.13 at 10h 45m 09s.xml">
-      <configuration name="pytest in 1. unit test simple example (Calc).py" configurationId="tests" />
+    <history-entry file="pytest_in_TDD_py - 2019.02.25 at 09h 47m 17s.xml">
+      <configuration name="pytest in TDD.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_unit_test_simple_example_(Calc)_py - 2019.02.13 at 10h 46m 37s.xml">
-      <configuration name="pytest in unit test simple example (Calc).py" configurationId="tests" />
+    <history-entry file="pytest_in_TDD_py - 2019.02.25 at 09h 47m 40s.xml">
+      <configuration name="pytest in TDD.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_unit_test_simple_example_(Calc)_py - 2019.02.13 at 10h 50m 15s.xml">
-      <configuration name="pytest in unit test simple example (Calc).py" configurationId="tests" />
+    <history-entry file="pytest_for_unit_test_simple_example_(Calc)_TestStringMethods - 2019.02.25 at 09h 48m 15s.xml">
+      <configuration name="pytest for unit test simple example (Calc).TestStringMethods" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_unit_test_simple_example_(Calc)_py - 2019.02.13 at 10h 50m 33s.xml">
-      <configuration name="pytest in unit test simple example (Calc).py" configurationId="tests" />
+    <history-entry file="pytest_in_TDD_py - 2019.02.25 at 09h 49m 34s.xml">
+      <configuration name="pytest in TDD.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_unit_test_simple_example_(Calc)_py - 2019.02.13 at 10h 53m 02s.xml">
-      <configuration name="pytest in unit test simple example (Calc).py" configurationId="tests" />
+    <history-entry file="pytest_in_TDD_py - 2019.02.25 at 09h 50m 19s.xml">
+      <configuration name="pytest in TDD.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_unit_test_simple_example_(Calc)_py - 2019.02.13 at 10h 56m 15s.xml">
-      <configuration name="pytest in unit test simple example (Calc).py" configurationId="tests" />
+    <history-entry file="pytest_in_TDD_py - 2019.02.25 at 09h 50m 28s.xml">
+      <configuration name="pytest in TDD.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_unit_test_simple_example_(Calc)_py - 2019.02.13 at 10h 56m 46s.xml">
-      <configuration name="pytest in unit test simple example (Calc).py" configurationId="tests" />
+    <history-entry file="pytest_for_TDD_TestStringMethods_test_roman - 2019.02.25 at 09h 55m 07s.xml">
+      <configuration name="pytest for TDD.TestStringMethods.test_roman" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_unit_test_simple_example_(Calc)_py - 2019.02.13 at 11h 16m 20s.xml">
-      <configuration name="pytest in unit test simple example (Calc).py" configurationId="tests" />
+    <history-entry file="pytest_in_TDD_py - 2019.02.25 at 09h 55m 51s.xml">
+      <configuration name="pytest in TDD.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_unit_test_simple_example_(Calc)_py - 2019.02.13 at 11h 16m 44s.xml">
-      <configuration name="pytest in unit test simple example (Calc).py" configurationId="tests" />
+    <history-entry file="pytest_in_TDD_py - 2019.02.25 at 09h 56m 41s.xml">
+      <configuration name="pytest in TDD.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_TDD_py - 2019.02.25 at 09h 56m 50s.xml">
+      <configuration name="pytest in TDD.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -365,8 +312,8 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2700491" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3927987" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -383,16 +330,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/unit test simple example (Calc).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lab1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -400,6 +337,34 @@
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <marker date="1550045950530" expanded="true" signature="708:713" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit test simple example (Calc).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="26" selection-start-line="26" selection-end-line="26" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/_jb_pytest_runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TDD.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <marker date="1551084335388" expanded="true" signature="29:124" ph="..." />
+            <marker date="1551084335388" expanded="true" signature="167:296" ph="..." />
           </folding>
         </state>
       </provider>
