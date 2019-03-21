@@ -16,8 +16,8 @@ HWND hwButton_calculate;
 
 enum etCreditType
 {
-	eTYPE_DIFF = 0,
-	eTYPE_AYEN
+	eDIFF,
+	eANYEN
 };
 
 
@@ -39,9 +39,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		hwStatic_time = CreateWindow("STATIC", "Срок кредита(месяцев):", WS_CHILD | WS_VISIBLE, 15, 165, 200, 32, hWnd, NULL, NULL, NULL);
 		hwStatic_perc = CreateWindow("STATIC", "Ставка(%):", WS_CHILD | WS_VISIBLE, 15, 240, 200, 32, hWnd, NULL, NULL, NULL);
 
-		hwEdit_sum = CreateWindow("EDIT", "300000", WS_VISIBLE | WS_CHILD | WS_BORDER | ES_CENTER | ES_NUMBER, 15, 40, 200, 22, hWnd, NULL, NULL, NULL);
-		hwEdit_time = CreateWindow("EDIT", "6", WS_VISIBLE | WS_CHILD | WS_BORDER | ES_CENTER | ES_NUMBER, 15, 190, 200, 22, hWnd, NULL, NULL, NULL);
-		hwEdit_perc = CreateWindow("EDIT", "20", WS_VISIBLE | WS_CHILD | WS_BORDER | ES_CENTER, 15, 265, 200, 22, hWnd, NULL, NULL, NULL);
+		hwEdit_sum = CreateWindow("EDIT", "2000000", WS_VISIBLE | WS_CHILD | WS_BORDER | ES_CENTER | ES_NUMBER, 15, 40, 200, 22, hWnd, NULL, NULL, NULL);
+		hwEdit_time = CreateWindow("EDIT", "72", WS_VISIBLE | WS_CHILD | WS_BORDER | ES_CENTER | ES_NUMBER, 15, 190, 200, 22, hWnd, NULL, NULL, NULL);
+		hwEdit_perc = CreateWindow("EDIT", "12,6", WS_VISIBLE | WS_CHILD | WS_BORDER | ES_CENTER, 15, 265, 200, 22, hWnd, NULL, NULL, NULL);
 		hwEdit_info = CreateWindow("EDIT", "...", WS_VISIBLE | WS_CHILD | WS_BORDER | ES_READONLY | ES_MULTILINE | WS_VSCROLL, 300, 15, 800, 500, hWnd, NULL, NULL, NULL);
 
 		hwComb_type = CreateWindow("COMBOBOX", "", WS_VISIBLE | WS_CHILD | CBS_DROPDOWNLIST | CBS_HASSTRINGS, 15, 115, 200, 100, hWnd, NULL, NULL, NULL);
@@ -63,19 +63,19 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			char szType[32];
 			SendMessage(hwComb_type, CB_GETLBTEXT, (WPARAM)nIndex, (LPARAM)szType);
 
-			etCreditType eType = (strcmp(szType, "Дифференцированный") == 0) ? eTYPE_DIFF : eTYPE_AYEN;
+			etCreditType eType = (strcmp(szType, "Дифференцированный") == 0) ? eDIFF : eANYEN;
 
 			char buf[255];
 			GetWindowText(hwEdit_sum, buf, 255);
 			double CreditSum = atof(buf);
 
 			GetWindowText(hwEdit_perc, buf, 255);
-			double Perc = atof(buf);
+			double Perc = atof(buf) / 100.0;
 
 			GetWindowText(hwEdit_time, buf, 255);
 			int Months = atoi(buf);
 
-			if (eType == eTYPE_DIFF)
+			if (eType == eDIFF)
 			{
 				CalculateDiff(CreditSum, Perc, Months);
 			}
@@ -161,30 +161,31 @@ void CalculateDiff(double CreditSum, double Perc, int Months)
 	double Sum_keep = CreditSum;
 	char szInfo[1000000];
 
-	double MonthSum = CreditSum / Months;
+	double MonthSum = CreditSum / (double)Months;
 	sprintf(szInfo, "Тип кредита: Дифференцированный\r\n\r\nЕжемесячный платёж по основному долгу: %.2f\r\n\r\n", MonthSum);
 
 	sprintf(szInfo, "%s                        Начисленный процент:          Ежемесячный платёж с процентом:\r\n", szInfo);
 
-	double* pPercs = new double[Months];
+	double* Percs = new double[Months];
 	for (int i = 0; i < Months; i++)
 	{
-		double NumDay = (i % 2 == 0) ? 31.0 : 30.0;
-		pPercs[i] = CreditSum * Perc / 100.0 * (NumDay / 365.0);
+		double NumDay = 12.0;
+
+		Percs[i] = CreditSum * Perc / NumDay;
 		CreditSum -= MonthSum;
 	}
 
-	double* pSumPercs = new double[Months];
+	double* SumPercs = new double[Months];
 	for (int i = 0; i < Months; i++)
 	{
-		pSumPercs[i] = pPercs[i] + MonthSum;
-		sprintf(szInfo, "%s%d-й месяц:       %.2f                                    %.2f\r\n", szInfo, i + 1, pPercs[i], pSumPercs[i]);
+		SumPercs[i] = Percs[i] + MonthSum;
+		sprintf(szInfo, "%s%d-й месяц:       %.2f                                    %.2f\r\n", szInfo, i + 1, Percs[i], SumPercs[i]);
 	}
 
 	double FullSum = 0;
-	for (int i = 0; i < MonthSum; i++)
+	for (int i = 0; i < Months; i++)
 	{
-		FullSum += pSumPercs[i];
+		FullSum += SumPercs[i];
 	}
 	sprintf(szInfo, "%s\r\nИтоговый платёж по кредиту = %.2f\r\n", szInfo, FullSum);
 
@@ -195,8 +196,10 @@ void CalculateDiff(double CreditSum, double Perc, int Months)
 
 void CalculateAyen(double CreditSum, double Perc, int Months)
 {
-	double Buf = pow(1 + Perc / 100.0 / 12.0, Months);
-	double Coef = (Perc / 100.0 / 12.0 * Buf) / (Buf - 1);
+	char szDebug[10000];
+
+	long double Buf = pow(1.0 + Perc / 12.0, (double)Months);
+	double Coef = (Perc / 12.0 * Buf) / (Buf - 1);
 
 	char szInfo[1000000];
 	sprintf(szInfo, "Тип кредита: Аннуитетный\r\n\r\nКоэффициент аннуитета: %.2f\r\n\r\n", Coef);
