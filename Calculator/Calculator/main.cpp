@@ -21,8 +21,8 @@ enum etCreditType
 };
 
 
-void CalculateDiff(long double ldSum, byte btPerc, byte btTime);
-void CalculateAyen(long double ldSum, byte btPerc, byte btTime);
+void CalculateDiff(double CreditSum, double Perc, int Months);
+void CalculateAyen(double CreditSum, double Perc, int Months);
 
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -41,7 +41,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 		hwEdit_sum = CreateWindow("EDIT", "300000", WS_VISIBLE | WS_CHILD | WS_BORDER | ES_CENTER | ES_NUMBER, 15, 40, 200, 22, hWnd, NULL, NULL, NULL);
 		hwEdit_time = CreateWindow("EDIT", "6", WS_VISIBLE | WS_CHILD | WS_BORDER | ES_CENTER | ES_NUMBER, 15, 190, 200, 22, hWnd, NULL, NULL, NULL);
-		hwEdit_perc = CreateWindow("EDIT", "20", WS_VISIBLE | WS_CHILD | WS_BORDER | ES_CENTER | ES_NUMBER, 15, 265, 200, 22, hWnd, NULL, NULL, NULL);
+		hwEdit_perc = CreateWindow("EDIT", "20", WS_VISIBLE | WS_CHILD | WS_BORDER | ES_CENTER, 15, 265, 200, 22, hWnd, NULL, NULL, NULL);
 		hwEdit_info = CreateWindow("EDIT", "...", WS_VISIBLE | WS_CHILD | WS_BORDER | ES_READONLY | ES_MULTILINE | WS_VSCROLL, 300, 15, 800, 500, hWnd, NULL, NULL, NULL);
 
 		hwComb_type = CreateWindow("COMBOBOX", "", WS_VISIBLE | WS_CHILD | CBS_DROPDOWNLIST | CBS_HASSTRINGS, 15, 115, 200, 100, hWnd, NULL, NULL, NULL);
@@ -67,31 +67,21 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 			char buf[255];
 			GetWindowText(hwEdit_sum, buf, 255);
-			long double ldSum = atof(buf);
+			double CreditSum = atof(buf);
 
 			GetWindowText(hwEdit_perc, buf, 255);
-			byte btPerc = (byte)atoi(buf);
-			if (btPerc > 100)
-			{
-				MessageBox(hWnd, "¬ведите ставку ниже 100%", "ѕредупреждение", MB_OK | MB_ICONWARNING);
-				break;
-			}
+			double Perc = atof(buf);
 
 			GetWindowText(hwEdit_time, buf, 255);
-			byte btTime = (byte)atoi(buf);
-			if (btTime > 240)
-			{
-				MessageBox(hWnd, "¬ведите срок кредита меньше 20 лет(240 мес€цев)", "ѕредупреждение", MB_OK | MB_ICONWARNING);
-				break;
-			}
+			int Months = atoi(buf);
 
 			if (eType == eTYPE_DIFF)
 			{
-				CalculateDiff(ldSum, btPerc, btTime);
+				CalculateDiff(CreditSum, Perc, Months);
 			}
 			else
 			{
-				CalculateAyen(ldSum, btPerc, btTime);
+				CalculateAyen(CreditSum, Perc, Months);
 			}
 		}
 
@@ -166,56 +156,54 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, PSTR, INT iCmdShow)
 }
 
 
-void CalculateDiff(long double ldSum, byte btPerc, byte btTime)
+void CalculateDiff(double CreditSum, double Perc, int Months)
 {
-	long double ldSum_keep = ldSum;
+	double Sum_keep = CreditSum;
 	char szInfo[1000000];
 
-	long double dMonthPay = ldSum / btTime;
-	sprintf(szInfo, "“ип кредита: ƒифференцированный\r\n\r\n≈жемес€чный платЄж по основному долгу: %.2f\r\n\r\n", dMonthPay);
+	double MonthSum = CreditSum / Months;
+	sprintf(szInfo, "“ип кредита: ƒифференцированный\r\n\r\n≈жемес€чный платЄж по основному долгу: %.2f\r\n\r\n", MonthSum);
 
-	sprintf(szInfo, "%sЌачисленный процент:\r\n", szInfo);
-	long double* pPercs = new long double[btTime];
-	for (byte i = 0; i < btTime; i++)
+	sprintf(szInfo, "%s                        Ќачисленный процент:          ≈жемес€чный платЄж с процентом:\r\n", szInfo);
+
+	double* pPercs = new double[Months];
+	for (int i = 0; i < Months; i++)
 	{
-		double dNumDay = (i % 2 == 0) ? 31 : 30;
-		pPercs[i] = ldSum * (double)btPerc / 100.0 * dNumDay / 365.0;
-		sprintf(szInfo, "%s%d-й мес€ц = %.2f\r\n", szInfo, i + 1, pPercs[i]);
-
-		ldSum -= dMonthPay;
+		double NumDay = (i % 2 == 0) ? 31.0 : 30.0;
+		pPercs[i] = CreditSum * Perc / 100.0 * (NumDay / 365.0);
+		CreditSum -= MonthSum;
 	}
 
-	long double* pSumPercs = new long double[btTime];
-	sprintf(szInfo, "%s\r\n≈жемес€чный платЄж с процентом:\r\n", szInfo);
-	for (byte i = 0; i < btTime; i++)
+	double* pSumPercs = new double[Months];
+	for (int i = 0; i < Months; i++)
 	{
-		pSumPercs[i] = pPercs[i] + dMonthPay;
-		sprintf(szInfo, "%s%d-й мес€ц = %.2f\r\n", szInfo, i + 1, pSumPercs[i]);
+		pSumPercs[i] = pPercs[i] + MonthSum;
+		sprintf(szInfo, "%s%d-й мес€ц:       %.2f                                    %.2f\r\n", szInfo, i + 1, pPercs[i], pSumPercs[i]);
 	}
 
-	long double ldFullSum = 0;
-	for (byte i = 0; i < btTime; i++)
+	double FullSum = 0;
+	for (int i = 0; i < MonthSum; i++)
 	{
-		ldFullSum += pSumPercs[i];
+		FullSum += pSumPercs[i];
 	}
-	sprintf(szInfo, "%s\r\n»тоговый платЄж по кредиту = %.2f\r\n", szInfo, ldFullSum);
+	sprintf(szInfo, "%s\r\n»тоговый платЄж по кредиту = %.2f\r\n", szInfo, FullSum);
 
-	sprintf(szInfo, "%sѕереплата = %.2f", szInfo, ldFullSum - ldSum_keep);
+	sprintf(szInfo, "%sѕереплата = %.2f", szInfo, FullSum - Sum_keep);
 
 	SetWindowText(hwEdit_info, szInfo);
 }
 
-void CalculateAyen(long double ldSum, byte btPerc, byte btTime)
+void CalculateAyen(double CreditSum, double Perc, int Months)
 {
-	long double ldBuf = pow(1 + btPerc/100.0, btTime);
-	long double ldCoef = (btPerc/100.0 * ldBuf) / (ldBuf - 1);
+	double Buf = pow(1 + Perc / 100.0 / 12.0, Months);
+	double Coef = (Perc / 100.0 / 12.0 * Buf) / (Buf - 1);
 
 	char szInfo[1000000];
-	sprintf(szInfo, "“ип кредита: јннуитетный\r\n\r\n оэффициент аннуитета: %.2f\r\n\r\n", ldCoef);
+	sprintf(szInfo, "“ип кредита: јннуитетный\r\n\r\n оэффициент аннуитета: %.2f\r\n\r\n", Coef);
 
-	sprintf(szInfo, "%s≈жемес€чный платЄж: %.2f\r\n", szInfo, ldSum * ldCoef);
-	sprintf(szInfo, "%s»тоговый платЄж:        %.2f\r\n", szInfo, ldSum * ldCoef * btTime);
-	sprintf(szInfo, "%sѕереплата:                   %.2f\r\n", szInfo, ldSum * ldCoef * btTime - ldSum);
+	sprintf(szInfo, "%s≈жемес€чный платЄж: %.2f\r\n", szInfo, CreditSum * Coef);
+	sprintf(szInfo, "%s»тоговый платЄж:        %.2f\r\n", szInfo, CreditSum * Coef * Months);
+	sprintf(szInfo, "%sѕереплата:                   %.2f\r\n", szInfo, CreditSum * Coef * Months - CreditSum);
 
 	SetWindowText(hwEdit_info, szInfo);
 }
