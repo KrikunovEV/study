@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ef2bc20-7a85-44b6-a33d-27665f4c1b93" name="Default Changelist" comment="" />
+    <list default="true" id="6ef2bc20-7a85-44b6-a33d-27665f4c1b93" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Calculator/.vs/Calculator/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator/.vs/Calculator/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculator/.vs/Calculator/v15/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator/.vs/Calculator/v15/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculator/Calculator/Debug/Calculator.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator/Calculator/Debug/Calculator.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculator/Calculator/Debug/Calculator.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator/Calculator/Debug/Calculator.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculator/Calculator/Debug/Calculator.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator/Calculator/Debug/Calculator.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculator/Calculator/Debug/Calculator.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator/Calculator/Debug/Calculator.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculator/Calculator/Debug/Calculator.tlog/Calculator.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator/Calculator/Debug/Calculator.tlog/Calculator.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculator/Calculator/Debug/Calculator.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator/Calculator/Debug/Calculator.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculator/Calculator/Debug/Calculator.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator/Calculator/Debug/Calculator.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculator/Calculator/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator/Calculator/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculator/Calculator/Debug/vc141.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator/Calculator/Debug/vc141.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculator/Calculator/Debug/vc141.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator/Calculator/Debug/vc141.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculator/Calculator/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator/Calculator/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculator/Debug/Calculator.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator/Debug/Calculator.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculator/Debug/Calculator.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator/Debug/Calculator.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculator/Debug/Calculator.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator/Debug/Calculator.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,17 +46,38 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="968271724">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="328" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="328" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="139" column="48" lean-forward="true" selection-start-line="139" selection-start-column="48" selection-end-line="139" selection-end-column="48" />
+            <state relative-caret-position="343">
+              <caret line="138" column="63" selection-start-line="138" selection-start-column="63" selection-end-line="138" selection-end-column="63" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <marker date="1553460112228" expanded="true" signature="1681:3466" ph="..." />
               </folding>
             </state>
           </provider>
@@ -142,23 +182,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24968314" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24925596" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2422611" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3715221" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -170,11 +209,10 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="139" column="48" lean-forward="true" selection-start-line="139" selection-start-column="48" selection-end-line="139" selection-end-column="48" />
+        <state relative-caret-position="343">
+          <caret line="138" column="63" selection-start-line="138" selection-start-column="63" selection-end-line="138" selection-end-column="63" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1553460112228" expanded="true" signature="1681:3466" ph="..." />
           </folding>
         </state>
       </provider>

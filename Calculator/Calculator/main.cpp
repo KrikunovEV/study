@@ -41,7 +41,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 		hwEdit_sum = CreateWindow("EDIT", "2000000", WS_VISIBLE | WS_CHILD | WS_BORDER | ES_CENTER | ES_NUMBER, 15, 40, 200, 22, hWnd, NULL, NULL, NULL);
 		hwEdit_time = CreateWindow("EDIT", "72", WS_VISIBLE | WS_CHILD | WS_BORDER | ES_CENTER | ES_NUMBER, 15, 190, 200, 22, hWnd, NULL, NULL, NULL);
-		hwEdit_perc = CreateWindow("EDIT", "12,6", WS_VISIBLE | WS_CHILD | WS_BORDER | ES_CENTER, 15, 265, 200, 22, hWnd, NULL, NULL, NULL);
+		hwEdit_perc = CreateWindow("EDIT", "12.6", WS_VISIBLE | WS_CHILD | WS_BORDER | ES_CENTER, 15, 265, 200, 22, hWnd, NULL, NULL, NULL);
 		hwEdit_info = CreateWindow("EDIT", "...", WS_VISIBLE | WS_CHILD | WS_BORDER | ES_READONLY | ES_MULTILINE | WS_VSCROLL, 300, 15, 800, 500, hWnd, NULL, NULL, NULL);
 
 		hwComb_type = CreateWindow("COMBOBOX", "", WS_VISIBLE | WS_CHILD | CBS_DROPDOWNLIST | CBS_HASSTRINGS, 15, 115, 200, 100, hWnd, NULL, NULL, NULL);

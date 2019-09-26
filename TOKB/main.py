@@ -2,7 +2,12 @@ from random import randint
 import time
 from math import sqrt
 
+current_milli_time = lambda: int(round(time.time() * 1000000))
+
 def Classic(x, y):
+
+    qq = current_milli_time()
+
     iterations = 0
 
     mod = x % y
@@ -12,10 +17,11 @@ def Classic(x, y):
         y = mod
         mod = x % y
 
-    return y, iterations
+    return y, iterations, current_milli_time() - qq
 
 
 def Binary(x, y):
+    qq = current_milli_time()
     iterations = 0
 
     k = 1
@@ -38,7 +44,7 @@ def Binary(x, y):
 
         iterations += 1
 
-    return y * k, iterations
+    return y * k, iterations, current_milli_time() - qq
 
 
 def reversed(b, k):
@@ -50,7 +56,8 @@ def reversed(b, k):
     return -1
 
 def k_algorithm(x, y, k):
-    A = x
+    qq = current_milli_time()
+
     iterations = 0
 
     max_x = int(sqrt(k)) + 1
@@ -86,7 +93,7 @@ def k_algorithm(x, y, k):
             z *= -1
 
         if z == 1:
-            return 1, iterations
+            return 1, iterations, current_milli_time() - qq
 
         x = y
         y = z
@@ -94,10 +101,11 @@ def k_algorithm(x, y, k):
             x, y = y, x
 
         if 0 < y < k:
-            NOD, i = Classic(x, y)
-            return NOD, iterations
+            NOD, i, tt = Classic(x, y)
+            return NOD, iterations, current_milli_time() - qq
 
 def approx_k_algorithm(x, y, k):
+    qq = current_milli_time()
     iterations = 0
 
     z = k + 1
@@ -120,16 +128,19 @@ def approx_k_algorithm(x, y, k):
 
         alpha *= sign
 
+        while alpha > 1:
+            alpha -= 1
+
         l = [1, 100]
         r = [99, 100]
 
         left = False
         while True:
-            #print(l[0] / l[1], alpha, r[0] / r[1])
-            if abs(alpha - l[0] / l[1]) < 0.01:
+            #print(l[0] / l[1], alpha, r[0] / r[1]) женя лучший
+            if abs(alpha - l[0] / l[1]) < 0.5:
                 left = True
                 break
-            if abs(alpha - r[0] / r[1]) < 0.01:
+            if abs(alpha - r[0] / r[1]) < 0.5:
                 break
 
             left_closer = False
@@ -139,13 +150,13 @@ def approx_k_algorithm(x, y, k):
             if left_closer:
                 r[0] = l[0] * r[1] + r[0] * l[1]
                 r[1] = l[1] * r[1] * 2
-                d, i = Classic(r[0], r[1])
+                d, i, tt = Classic(r[0], r[1])
                 r[0] /= d
                 r[1] /= d
             else:
                 l[0] = l[0] * r[1] + r[0] * l[1]
                 l[1] = l[1] * r[1] * 2
-                d, i = Classic(l[0], l[1])
+                d, i, tt = Classic(l[0], l[1])
                 l[0] /= d
                 l[1] /= d
 
@@ -164,13 +175,14 @@ def approx_k_algorithm(x, y, k):
         z = (x * a + y * b) / k
         while z % 2 == 0:
             z /= 2
-        #print("z=", z)
 
         if z < 0:
             z *= -1
 
+        #print("z=", z)
+
         if z == 1:
-            return 1, iterations
+            return 1, iterations, current_milli_time() - qq
 
         x = y
         y = z
@@ -178,8 +190,8 @@ def approx_k_algorithm(x, y, k):
             x, y = y, x
 
         if 0 < y < k:
-            NOD, i = Classic(x, y)
-            return NOD, iterations
+            NOD, i, tt = Classic(x, y)
+            return NOD, iterations, current_milli_time() - qq
 
 
 
@@ -203,7 +215,9 @@ print(x, y)
 print("\n(НОД, итераций)")
 print(Classic(x, y))
 print(Binary(x, y))
+print()
 print(k_algorithm(x, y, 16))
 print(k_algorithm(x, y, 4096))
-#print(approx_k_algorithm(x, y, 16))
+print()
+print(approx_k_algorithm(x, y, 16))
 print(approx_k_algorithm(x, y, 4096))
