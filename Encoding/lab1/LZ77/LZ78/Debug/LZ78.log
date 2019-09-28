@@ -1,3 +1,0 @@
-﻿  main.cpp
-c:\users\evgeniy\desktop\study\study\encoding\lab1\lz77\lz78\main.cpp(39): warning C4244: инициализация: преобразование "std::streamoff" в "size_t", возможна потеря данных
-  LZ78.vcxproj -> C:\Users\Evgeniy\Desktop\study\study\Encoding\lab1\LZ77\Debug\LZ78.exe

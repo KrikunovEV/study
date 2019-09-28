@@ -1,4 +1,0 @@
-﻿  main.cpp
-c1xx : warning C4199: двухэтапный поиск имен не поддерживается для C++/CLI, C++/CX или OpenMP. Используйте /Zc:twoPhase-
-  LINK : не найден или не выполнена сборка C:\Users\Evgenii\Desktop\study\study\Parallel\Debug\lab1.exe при последней инкрементной компоновке; выполняется полная компоновка
-  lab1.vcxproj -> C:\Users\Evgenii\Desktop\study\study\Parallel\Debug\lab1.exe

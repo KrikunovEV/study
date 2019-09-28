@@ -1,4 +1,0 @@
-﻿  main.cpp
-c1xx : warning C4199: двухэтапный поиск имен не поддерживается для C++/CLI, C++/CX или OpenMP. Используйте /Zc:twoPhase-
-c:\users\evgenii\source\repos\parallel\parallel\main.cpp(27): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  Parallel.vcxproj -> C:\Users\Evgenii\source\repos\Parallel\Debug\Parallel.exe
