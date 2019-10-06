@@ -3,7 +3,7 @@
 import cv2 as cv
 import matplotlib.pyplot as plt
 
-image = cv.imread("1/segment.jpeg")
+image = cv.imread("segment.jpeg")
 plt.imshow(image)
 
 hsv_image = cv.cvtColor(image, cv.COLOR_BGR2HSV)

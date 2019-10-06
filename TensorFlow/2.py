@@ -16,6 +16,16 @@ with graph.as_default():
 
     distance = tf.sqrt(sum)
 
+    print_op = [tf.print("sub:\n", sub, output_stream=sys.stdout),
+                tf.print("square:\n", square, output_stream=sys.stdout),
+                tf.print("sum:\n", sum, output_stream=sys.stdout),
+                tf.print("distance:\n", distance, output_stream=sys.stdout)]
+
+    tf.summary.scalar('distance', distance[0])
+    summary_merged_op = tf.summary.merge_all()
+
+    tensorboard_writer = tf.summary.FileWriter('./logs', graph)
+
 if USE_GPU:
     gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=GPU_MEMORY_FRACTION)
     session_conf = tf.ConfigProto(allow_soft_placement=True,
@@ -31,11 +41,10 @@ session = tf.Session(graph=graph, config=session_conf)
 data = {'v1': [[1, 2, 3], [1, 2, 3]],
         'v2': [[0, 2, 4], [0, 2, 4]]}
 
-print_op = [tf.print("sub:\n", sub, output_stream=sys.stdout),
-            tf.print("square:\n", square, output_stream=sys.stdout),
-            tf.print("sum:\n", sum, output_stream=sys.stdout),
-            tf.print("distance:\n", distance, output_stream=sys.stdout)]
 
 with session.as_default():
-    distance_output, _ = session.run([distance, print_op], feed_dict={v1: data['v1'],
-                                                                      v2: data['v2']})
+    distance_output, _, summary_ = session.run([distance, print_op, summary_merged_op], feed_dict={v1: data['v1'],
+                                                                                                   v2: data['v2']})
+    tensorboard_writer.add_summary(summary_, 0)
+
+
