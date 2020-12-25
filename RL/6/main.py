@@ -109,13 +109,13 @@ for id, solver_type in enumerate(SolverType):
         solver_deterministic = FrozenLakeSolver(env_type=EnvType.Deterministic,
                                                 solver_type=solver_type,
                                                 gamma=1.,
-                                                episodes=2500,
+                                                episodes=3000,
                                                 alpha=alpha)
 
         solver_stochastic = FrozenLakeSolver(env_type=EnvType.Stochastic,
                                              solver_type=solver_type,
                                              gamma=1.,
-                                             episodes=2500,
+                                             episodes=3000,
                                              alpha=alpha)
 
         optimal_steps = solver_deterministic.play()

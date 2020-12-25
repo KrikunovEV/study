@@ -78,7 +78,7 @@ class QLearning:
         steps = 0
         optimal_step = 0
         for episode in range(self.episodes):
-            print(f'SARSA, episode: {episode}/{self.episodes}')
+            print(f'Q learning, episode: {episode}/{self.episodes}')
             obs = self.env.reset()
             done = False
             while not done:
@@ -122,7 +122,7 @@ class DQLearning:
         steps = 0
         optimal_step = 0
         for episode in range(self.episodes):
-            print(f'SARSA, episode: {episode}/{self.episodes}')
+            print(f'DQ learning, episode: {episode}/{self.episodes}')
             obs = self.env.reset()
             done = False
             while not done:
