@@ -103,4 +103,4 @@ class FrozenLakeSolver:
                 break
 
 
-solver = FrozenLakeSolver(env_type=EnvType.Stochastic, policy_init=PolicyInit.Random, gamma=0.99, eps=0.00001)
+solver = FrozenLakeSolver(env_type=EnvType.Deterministic, policy_init=PolicyInit.Random, gamma=0.99, eps=0.00001)
